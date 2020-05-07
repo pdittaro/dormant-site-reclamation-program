@@ -1,0 +1,219 @@
+version: "2"
+
+services:
+  ####################### Keycloak Definition #######################
+  keycloak:
+    restart: always
+    container_name: mds_keycloak
+    image: jboss/keycloak
+    environment:
+      - KEYCLOAK_USER=admin
+      - KEYCLOAK_PASSWORD=admin
+      - KEYCLOAK_IMPORT=/tmp/keycloak-local-realm.json
+      - DB_VENDOR=h2
+    volumes:
+      - ./settings/keycloak/keycloak-local-realm.json:/tmp/keycloak-local-realm.json
+      - ./settings/keycloak/keycloak-local-user.sh:/tmp/keycloak-local-user.sh
+    ports:
+      - "8080:8080"
+      - "8443:8443"
+    networks:
+      - mds
+    # logging:
+    #     driver: none
+
+  ####################### Postgres Definition #######################
+  postgres:
+    restart: always
+    container_name: mds_postgres
+    build:
+      context: migrations
+      dockerfile: Dockerfile.dev
+    environment:
+      - POSTGRES_USER=mds
+      - POSTGRES_PASSWORD=test
+      - POSTGRES_DB=mds
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    networks:
+      - mds
+
+  ####################### Flyway Migration Definition #######################
+  flyway:
+    container_name: mds_flyway
+    build:
+      context: migrations
+      dockerfile: Dockerfile.flyway.dev
+    environment:
+      - FLYWAY_USER=mds
+      - FLYWAY_HOME=/flyway
+      - FLYWAY_PASSWORD=test
+      - FLYWAY_DB_NAME=mds
+      - FLYWAY_DB_HOST=postgres
+      - FLYWAY_URL=jdbc:postgresql://postgres/mds
+      - FLYWAY_OUT_OF_ORDER=true
+      - FLYWAY_CONNECT_RETRIES=60
+      - NRIS_USER_PASSWORD=nris_pass
+      - DOCMAN_USER_PASSWORD=docman_pass
+      - LOGSTASH_USER_PASSWORD=logstash_pass
+      - METABASE_USER_PASSWORD=metabase_pass
+    depends_on:
+      - postgres
+    networks:
+      - mds
+
+  ####################### Backend Definition #######################
+  backend:
+    restart: always
+    container_name: mds_backend
+    build:
+      context: services/core-api
+    env_file: services/core-api/.env
+    ports:
+      - 5000:5000
+    volumes:
+      - ./services/core-api/:/app/
+    depends_on:
+      - flyway
+      - redis
+      - nris_backend
+      - document_manager_backend
+    networks:
+      - mds
+
+  ####################### Redis Definition #######################
+  redis:
+    image: redis:3.2-alpine
+    container_name: mds_cache
+    restart: always
+    command: redis-server --requirepass redis-password
+    ports:
+      - "6379:6379"
+    networks:
+      - mds
+
+  ####################### Frontend Definition #######################
+  frontend:
+    restart: always
+    container_name: mds_frontend
+    build:
+      context: services/core-web
+    command: ["npm", "run", "serve"]
+    volumes:
+      - ./services/core-web/src/:/app/src/
+    ports:
+      - 3000:3000
+    depends_on:
+      - backend
+    env_file: ./services/core-web/.env
+    networks:
+      - mds
+
+  minespace:
+    restart: always
+    container_name: mds_minespace
+    build:
+      context: services/minespace-web
+    command: ["npm", "run", "serve"]
+    volumes:
+      - ./services/minespace-web/src/:/app/src/
+    ports:
+      - 3020:3020
+    depends_on:
+      - backend
+    env_file: ./services/minespace-web/.env
+    networks:
+      - mds
+
+  ####################### NRIS_BACKEND Definition #######################
+  nris_backend:
+    restart: always
+    container_name: nris_python
+    build:
+      context: services/nris-api/backend
+    ports:
+      - 5500:5500
+    volumes:
+      - ./services/nris-api/backend/:/app/
+    depends_on:
+      - flyway
+      - redis
+      - nris_migrate
+    env_file: ./services/nris-api/backend/.env
+    networks:
+      - mds
+
+  nris_migrate:
+    restart: on-failure
+    container_name: nris_migrate
+    build:
+      context: services/nris-api/backend
+    volumes:
+      - ./services/nris-api/backend/:/app/
+    depends_on:
+      - flyway
+      - redis
+    command: flask db upgrade
+    env_file: ./services/nris-api/backend/.env
+    networks:
+      - mds
+  ####################### DOCUMENT_MANAGER_BACKEND Definition #######################
+  document_manager_backend:
+    restart: always
+    container_name: document_manager_backend
+    build:
+      context: services/document-manager/backend
+    ports:
+      - 5001:5001
+    volumes:
+      - ./services/document-manager/backend/:/app/
+    depends_on:
+      - flyway
+      - redis
+      - document_manager_migrate
+    env_file: ./services/document-manager/backend/.env
+    networks:
+      - mds
+
+  document_manager_migrate:
+    restart: on-failure
+    container_name: document_manager_migrate
+    build:
+      context: services/document-manager/backend
+    volumes:
+      - ./services/document-manager/backend/:/app/
+    depends_on:
+      - flyway
+      - redis
+    command: flask db upgrade
+    env_file: ./services/document-manager/backend/.env
+    networks:
+      - mds
+
+  ####################### DOCUMENT_GENERATION Definition #######################
+  docgen-api:
+    restart: always
+    container_name: docgen_api
+    image: bcgovimages/doc-gen-api:v1.0.0
+    command: ["npm", "run", "start"]
+    environment:
+      - APP_PORT=3030
+      - CACHE_DIR=/tmp/tmp-reports
+      - NODE_ENV=development
+    #volumes:
+    #  - ./services/docgen-api/:/carbone-api/
+    ports:
+      - 3030:3030
+    networks:
+      - mds
+
+####################### Networks Definition #######################
+networks:
+  mds:
+    driver: "bridge"
+
+####################### Volumes Definition #######################
+volumes:
+  postgres-data:
