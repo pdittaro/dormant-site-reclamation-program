@@ -15,7 +15,7 @@ const NotFoundNotice = () => (
         extra={
           <Paragraph>
             Please contact&nbsp;
-            <a href={Strings.MDS_EMAIL}>{Strings.MDS_EMAIL}</a>
+            <a href={Strings.HELP_EMAIL}>{Strings.HELP_EMAIL}</a>
             &nbsp;for assistance.
           </Paragraph>
         }

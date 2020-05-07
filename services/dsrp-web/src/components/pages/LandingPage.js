@@ -3,10 +3,7 @@ import { connect } from "react-redux";
 import { Row, Col, Card, Button, Typography } from "antd";
 import * as Strings from "@/constants/strings";
 import PropTypes from "prop-types";
-import * as COMMON_ENV from "@/constants/environment";
-// Uncomment when image is re-introduced
-// import { MAP_LOGO } from "@/constants/assets";
-import * as MINESPACE_ENV from "@/constants/environment";
+import * as ENV from "@/constants/environment";
 import { isAuthenticated } from "@/selectors/authenticationSelectors";
 
 const { Paragraph, Text, Title } = Typography;
@@ -36,7 +33,7 @@ export const LandingPage = (props) => (
         </Paragraph>
         <Button type="primary" size="large" className="login">
           <a
-            href={`${COMMON_ENV.KEYCLOAK.loginURL}${MINESPACE_ENV.BCEID_LOGIN_REDIRECT_URI}&kc_idp_hint=${COMMON_ENV.KEYCLOAK.idpHint}`}
+            href={`${ENV.KEYCLOAK.loginURL}${ENV.BCEID_LOGIN_REDIRECT_URI}&kc_idp_hint=${ENV.KEYCLOAK.idpHint}`}
           >
             Log in
           </a>
@@ -59,7 +56,7 @@ export const LandingPage = (props) => (
         {!props.isAuthenticated && (
           <Button type="primary" size="large" className="login">
             <a
-              href={`${COMMON_ENV.KEYCLOAK.loginURL}${MINESPACE_ENV.BCEID_LOGIN_REDIRECT_URI}&kc_idp_hint=${COMMON_ENV.KEYCLOAK.idpHint}`}
+              href={`${ENV.KEYCLOAK.loginURL}${ENV.BCEID_LOGIN_REDIRECT_URI}&kc_idp_hint=${ENV.KEYCLOAK.idpHint}`}
             >
               Log in
             </a>
@@ -111,7 +108,7 @@ export const LandingPage = (props) => (
         <Paragraph strong>If you have a BCeID:</Paragraph>
         <Paragraph>
           Contact us at&nbsp;
-          <a href={`mailto:${Strings.MDS_EMAIL}`}>{Strings.MDS_EMAIL}</a>
+          <a href={`mailto:${Strings.HELP_EMAIL}`}>{Strings.HELP_EMAIL}</a>
           &nbsp;to request access to MineSpace.
         </Paragraph>
         <Paragraph strong>If you have multiple employees who need to use MineSpace:</Paragraph>
@@ -162,7 +159,7 @@ export const LandingPage = (props) => (
               </Paragraph>
               <Paragraph>
                 Email us at&nbsp;
-                <a href={`mailto:${Strings.MDS_EMAIL}`}>{Strings.MDS_EMAIL}</a>.
+                <a href={`mailto:${Strings.HELP_EMAIL}`}>{Strings.HELP_EMAIL}</a>.
               </Paragraph>
             </Col>
           </Row>

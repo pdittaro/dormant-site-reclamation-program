@@ -24,3 +24,12 @@ export const storeUserAccessData = (roles = {}) => ({
     roles,
   },
 });
+
+export const storeIsProponent = (isProponent) => {
+  return {
+    type: ActionTypes.STORE_IS_PROPONENT,
+    payload: {
+      data: isProponent,
+    },
+  };
+};

@@ -5,4 +5,6 @@ export const {
   getUserAccessData,
   getUserInfo,
   getKeycloak,
+  getRedirect,
+  isProponent,
 } = authenticationReducer;

@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Alert } from "antd";
-import { WARNING } from "@/constants/assets";
+import { Alert, Icon } from "antd";
 
 const propTypes = {
   type: PropTypes.oneOf(["IE", "mobile"]),
@@ -14,7 +13,7 @@ const defaultProps = {
 
 const renderIEBanner = () => (
   <div className="inline-flex flex-center">
-    <img src={WARNING} alt="warning" className="large-padding-right" />
+    <Icon type="warning" className="large-padding-right" />
     <div>
       <h2>Internet Explorer is not a supported browser.</h2>
       <p>If you continue with this browser the application may not work as intended.</p>

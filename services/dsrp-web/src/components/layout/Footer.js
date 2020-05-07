@@ -61,13 +61,13 @@ export const Footer = (props) => (
             </a>
           </Col>
           <Col xs={24} lg={4}>
-            <a className="footer-link" href={`mailto:${Strings.MDS_EMAIL}`}>
+            <a className="footer-link" href={`mailto:${Strings.HELP_EMAIL}`}>
               Contact Us
             </a>
           </Col>
         </Row>
       </Col>
-    </Row>
+  </Row>
   </Layout.Footer>
 );
 
