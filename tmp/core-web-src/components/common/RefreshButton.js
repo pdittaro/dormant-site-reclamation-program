@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Icon, Button } from "antd";
-import { store } from "@/App";
+import { store } from "@/app";
 
 /**
  * @constant RefreshButton  - Pre-styled button that accepts actions and

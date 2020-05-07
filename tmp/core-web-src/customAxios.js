@@ -2,7 +2,7 @@ import axios from "axios";
 import { notification } from "antd";
 import { isEmpty } from "lodash";
 import * as String from "@common/constants/strings";
-import { store } from "@/App";
+import { store } from "@/app";
 
 // https://stackoverflow.com/questions/39696007/axios-with-promise-prototype-finally-doesnt-work
 const promiseFinally = require("promise.prototype.finally");
