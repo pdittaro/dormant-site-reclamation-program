@@ -9,9 +9,9 @@ import {
   maxLength,
   dateNotInFuture,
   currency,
-} from "@common/utils/validate";
-import { resetForm, upperCase, currencyMask } from "@common/utils/helpers";
-import { BOND_DOCUMENTS } from "@common/constants/api";
+} from "@/utils/validate";
+import { resetForm, upperCase, currencyMask } from "@/utils/helpers";
+import { BOND_DOCUMENTS } from "@/constants/api";
 import RenderField from "@/components/common/RenderField";
 import RenderAutoSizeField from "@/components/common/RenderAutoSizeField";
 import RenderDate from "@/components/common/RenderDate";

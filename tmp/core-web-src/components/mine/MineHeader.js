@@ -5,25 +5,25 @@ import { Link } from "react-router-dom";
 import { uniqBy } from "lodash";
 import PropTypes from "prop-types";
 import { Menu, Divider, Button, Dropdown, Tag, Popover } from "antd";
-import { openModal, closeModal } from "@common/actions/modalActions";
+import { openModal, closeModal } from "@/actions/modalActions";
 import {
   updateMineRecord,
   createMineTypes,
   removeMineType,
   fetchMineRecordById,
   createTailingsStorageFacility,
-} from "@common/actionCreators/mineActionCreator";
-import { formatDate } from "@common/utils/helpers";
+} from "@/actionCreators/mineActionCreator";
+import { formatDate } from "@/utils/helpers";
 import {
   getMineRegionHash,
   getMineTenureTypesHash,
   getDisturbanceOptionHash,
   getCommodityOptionHash,
   getExemptionFeeStatusOptionsHash,
-} from "@common/selectors/staticContentSelectors";
-import { getCurrentMineTypes, getTransformedMineTypes } from "@common/selectors/mineSelectors";
-import { getUserInfo } from "@common/selectors/authenticationSelectors";
-import * as String from "@common/constants/strings";
+} from "@/selectors/staticContentSelectors";
+import { getCurrentMineTypes, getTransformedMineTypes } from "@/selectors/mineSelectors";
+import { getUserInfo } from "@/selectors/authenticationSelectors";
+import * as String from "@/constants/strings";
 import MineHeaderMapLeaflet from "@/components/maps/MineHeaderMapLeaflet";
 import { EDIT_OUTLINE_VIOLET, BRAND_DOCUMENT, EDIT } from "@/constants/assets";
 import * as route from "@/constants/routes";

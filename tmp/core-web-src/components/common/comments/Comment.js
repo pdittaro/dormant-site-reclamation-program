@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { formatDateTime } from "@common/utils/helpers";
+import { formatDateTime } from "@/utils/helpers";
 
 const propTypes = {
   // eslint-disable-next-line react/forbid-prop-types

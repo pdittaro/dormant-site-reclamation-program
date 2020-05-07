@@ -4,15 +4,15 @@ import { change } from "redux-form";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import queryString from "query-string";
-import { openModal, closeModal } from "@common/actions/modalActions";
-import { fetchParties, createParty } from "@common/actionCreators/partiesActionCreator";
+import { openModal, closeModal } from "@/actions/modalActions";
+import { fetchParties, createParty } from "@/actionCreators/partiesActionCreator";
 import {
   getDropdownProvinceOptions,
   getPartyRelationshipTypeHash,
   getPartyRelationshipTypesList,
-} from "@common/selectors/staticContentSelectors";
-import { getParties, getPartyPageData } from "@common/selectors/partiesSelectors";
-import * as Strings from "@common/constants/strings";
+} from "@/selectors/staticContentSelectors";
+import { getParties, getPartyPageData } from "@/selectors/partiesSelectors";
+import * as Strings from "@/constants/strings";
 import CustomPropTypes from "@/customPropTypes";
 import * as FORM from "@/constants/forms";
 import * as Permission from "@/constants/permissions";

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Field } from "redux-form";
 import { Form, Button } from "antd";
 import { concat, reject } from "lodash";
-import { MINE_REPORT_DOCUMENT } from "@common/constants/api";
+import { MINE_REPORT_DOCUMENT } from "@/constants/api";
 import FileUpload from "@/components/common/FileUpload";
 import LinkButton from "@/components/common/LinkButton";
 import { UploadedDocumentsTable } from "@/components/common/UploadedDocumentTable";

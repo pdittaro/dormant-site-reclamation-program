@@ -4,9 +4,9 @@ import PropTypes from "prop-types";
 import moment from "moment";
 import { connect } from "react-redux";
 
-import * as Strings from "@common/constants/strings";
-import { formatDate } from "@common/utils/helpers";
-import { getNoticeOfWorkApplicationTypeOptions } from "@common/selectors/staticContentSelectors";
+import * as Strings from "@/constants/strings";
+import { formatDate } from "@/utils/helpers";
+import { getNoticeOfWorkApplicationTypeOptions } from "@/selectors/staticContentSelectors";
 import CustomPropTypes from "@/customPropTypes";
 import LinkButton from "@/components/common/LinkButton";
 import GeneratePermitForm from "@/components/Forms/GeneratePermitForm";

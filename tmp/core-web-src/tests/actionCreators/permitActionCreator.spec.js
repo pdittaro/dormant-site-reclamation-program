@@ -7,10 +7,10 @@ import {
   createPermitAmendment,
   updatePermitAmendment,
   removePermitAmendmentDocument,
-} from "@common/actionCreators/permitActionCreator";
-import * as genericActions from "@common/actions/genericActions";
-import { ENVIRONMENT } from "@common/constants/environment";
-import * as API from "@common/constants/api";
+} from "@/actionCreators/permitActionCreator";
+import * as genericActions from "@/actions/genericActions";
+import { ENVIRONMENT } from "@/constants/environment";
+import * as API from "@/constants/api";
 import * as MOCK from "@/tests/mocks/dataMocks";
 
 const dispatch = jest.fn();

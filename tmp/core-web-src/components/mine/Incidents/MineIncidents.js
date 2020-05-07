@@ -5,14 +5,14 @@ import { destroy } from "redux-form";
 import PropTypes from "prop-types";
 import { Divider } from "antd";
 import moment from "moment";
-import { openModal, closeModal } from "@common/actions/modalActions";
+import { openModal, closeModal } from "@/actions/modalActions";
 import {
   fetchMineIncidents,
   createMineIncident,
   updateMineIncident,
-} from "@common/actionCreators/incidentActionCreator";
-import { getMineIncidents } from "@common/selectors/incidentSelectors";
-import { getMines, getMineGuid } from "@common/selectors/mineSelectors";
+} from "@/actionCreators/incidentActionCreator";
+import { getMineIncidents } from "@/selectors/incidentSelectors";
+import { getMines, getMineGuid } from "@/selectors/mineSelectors";
 import {
   getDropdownIncidentFollowupActionOptions,
   getDangerousOccurrenceSubparagraphOptions,
@@ -20,8 +20,8 @@ import {
   getDropdownIncidentStatusCodeOptions,
   getIncidentFollowupActionOptions,
   getDropdownIncidentCategoryCodeOptions,
-} from "@common/selectors/staticContentSelectors";
-import { getDropdownInspectors } from "@common/selectors/partiesSelectors";
+} from "@/selectors/staticContentSelectors";
+import { getDropdownInspectors } from "@/selectors/partiesSelectors";
 import * as FORM from "@/constants/forms";
 import CustomPropTypes from "@/customPropTypes";
 import * as Permission from "@/constants/permissions";
@@ -221,7 +221,4 @@ const mapDispatchToProps = (dispatch) =>
 MineIncidents.propTypes = propTypes;
 MineIncidents.defaultProps = defaultProps;
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(MineIncidents);
+export default connect(mapStateToProps, mapDispatchToProps)(MineIncidents);

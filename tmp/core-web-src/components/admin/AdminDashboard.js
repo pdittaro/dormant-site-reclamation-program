@@ -3,7 +3,7 @@ import { Row, Col, Tabs } from "antd";
 import { compose, bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import { fetchMineVerifiedStatuses } from "@common/actionCreators/mineActionCreator";
+import { fetchMineVerifiedStatuses } from "@/actionCreators/mineActionCreator";
 import { AuthorizationGuard } from "@/hoc/AuthorizationGuard";
 import * as Permission from "@/constants/permissions";
 import MinespaceUserManagement from "@/components/admin/MinespaceUserManagement";

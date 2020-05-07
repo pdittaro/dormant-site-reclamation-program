@@ -5,11 +5,8 @@ import { Input, Dropdown, Card } from "antd";
 import PropTypes from "prop-types";
 import { withRouter } from "react-router-dom";
 import { throttle } from "lodash";
-import { getSearchBarResults } from "@common/selectors/searchSelectors";
-import {
-  fetchSearchBarResults,
-  clearSearchBarResults,
-} from "@common/actionCreators/searchActionCreator";
+import { getSearchBarResults } from "@/selectors/searchSelectors";
+import { fetchSearchBarResults, clearSearchBarResults } from "@/actionCreators/searchActionCreator";
 import * as router from "@/constants/routes";
 import { SearchBarDropdown } from "@/components/search/SearchBarDropdown";
 
@@ -135,7 +132,4 @@ const mapDispatchToProps = (dispatch) =>
 SearchBar.propTypes = propTypes;
 SearchBar.defaultProps = defaultProps;
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(withRouter(SearchBar));
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(SearchBar));

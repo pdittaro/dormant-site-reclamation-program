@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import { getMineNames } from "@common/selectors/mineSelectors";
-import { fetchMineNameList } from "@common/actionCreators/mineActionCreator";
-import { createMinespaceUser } from "@common/actionCreators/minespaceActionCreator";
+import { getMineNames } from "@/selectors/mineSelectors";
+import { fetchMineNameList } from "@/actionCreators/mineActionCreator";
+import { createMinespaceUser } from "@/actionCreators/minespaceActionCreator";
 import CustomPropTypes from "@/customPropTypes";
 import AddMinespaceUser from "@/components/Forms/AddMinespaceUser";
 
@@ -84,7 +84,4 @@ const mapDispatchToProps = (dispatch) =>
 NewMinespaceUser.propTypes = propTypes;
 NewMinespaceUser.defaultProps = defaultProps;
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(NewMinespaceUser);
+export default connect(mapStateToProps, mapDispatchToProps)(NewMinespaceUser);

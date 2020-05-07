@@ -6,13 +6,10 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import MediaQuery from "react-responsive";
 import { includes } from "lodash";
-import { getUserInfo } from "@common/selectors/authenticationSelectors";
-import { fetchMineVerifiedStatuses } from "@common/actionCreators/mineActionCreator";
-import {
-  getCurrentUserVerifiedMines,
-  getCurrentUserUnverifiedMines,
-} from "@common/reducers/mineReducer";
-import * as Strings from "@common/constants/strings";
+import { getUserInfo } from "@/selectors/authenticationSelectors";
+import { fetchMineVerifiedStatuses } from "@/actionCreators/mineActionCreator";
+import { getCurrentUserVerifiedMines, getCurrentUserUnverifiedMines } from "@/reducers/mineReducer";
+import * as Strings from "@/constants/strings";
 import CustomPropTypes from "@/customPropTypes";
 import * as router from "@/constants/routes";
 import * as Permission from "@/constants/permissions";

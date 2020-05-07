@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import * as String from "@common/constants/strings";
+import * as String from "@/constants/strings";
 import { NO_MINE, MINER_TWO, PERMIT, GROUP_MINERS } from "@/constants/assets";
 
 /**

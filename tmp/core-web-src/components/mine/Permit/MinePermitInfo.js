@@ -10,12 +10,12 @@ import {
   updatePermitAmendment,
   createPermitAmendment,
   removePermitAmendmentDocument,
-} from "@common/actionCreators/permitActionCreator";
-import { fetchPartyRelationships } from "@common/actionCreators/partiesActionCreator";
-import { fetchMineRecordById } from "@common/actionCreators/mineActionCreator";
-import { openModal, closeModal } from "@common/actions/modalActions";
-import { getPermits } from "@common/reducers/permitReducer";
-import { getMines, getMineGuid } from "@common/selectors/mineSelectors";
+} from "@/actionCreators/permitActionCreator";
+import { fetchPartyRelationships } from "@/actionCreators/partiesActionCreator";
+import { fetchMineRecordById } from "@/actionCreators/mineActionCreator";
+import { openModal, closeModal } from "@/actions/modalActions";
+import { getPermits } from "@/reducers/permitReducer";
+import { getMines, getMineGuid } from "@/selectors/mineSelectors";
 import AuthorizationWrapper from "@/components/common/wrappers/AuthorizationWrapper";
 import * as router from "@/constants/routes";
 import * as Permission from "@/constants/permissions";

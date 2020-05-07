@@ -1,9 +1,9 @@
-import { noticeOfWorkReducer } from "@common/reducers/noticeOfWorkReducer";
+import { noticeOfWorkReducer } from "@/reducers/noticeOfWorkReducer";
 import {
   storeNoticeOfWorkApplications,
   storeNoticeOfWorkApplication,
   storeNoticeOfWorkApplicationReviews,
-} from "@common/actions/noticeOfWorkActions";
+} from "@/actions/noticeOfWorkActions";
 import * as MOCK from "@/tests/mocks/noticeOfWorkMocks";
 
 const baseExpectedValue = {

@@ -2,16 +2,16 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { Button, Tag, Table } from "antd";
-import { downloadFileFromDocumentManager } from "@common/utils/actionlessNetworkCalls";
-import { getInspectorsHash } from "@common/selectors/partiesSelectors";
+import { downloadFileFromDocumentManager } from "@/utils/actionlessNetworkCalls";
+import { getInspectorsHash } from "@/selectors/partiesSelectors";
 import {
   getHSRCMComplianceCodesHash,
   getIncidentDeterminationHash,
   getIncidentFollowupActionHash,
   getIncidentStatusCodeHash,
-} from "@common/selectors/staticContentSelectors";
-import { formatTime, formatDate } from "@common/utils/helpers";
-import * as Strings from "@common/constants/strings";
+} from "@/selectors/staticContentSelectors";
+import { formatTime, formatDate } from "@/utils/helpers";
+import * as Strings from "@/constants/strings";
 import LinkButton from "@/components/common/LinkButton";
 import CustomPropTypes from "@/customPropTypes";
 

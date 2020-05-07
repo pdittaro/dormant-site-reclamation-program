@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Popconfirm } from "antd";
 import PropTypes from "prop-types";
-import * as Strings from "@common/constants/strings";
+import * as Strings from "@/constants/strings";
 import { TRASHCAN } from "@/constants/assets";
 import CustomPropTypes from "@/customPropTypes";
 import NullScreen from "@/components/common/NullScreen";

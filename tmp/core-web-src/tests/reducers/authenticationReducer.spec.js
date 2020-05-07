@@ -1,10 +1,10 @@
-import { authenticationReducer } from "@common/reducers/authenticationReducer";
+import { authenticationReducer } from "@/reducers/authenticationReducer";
 import {
   authenticateUser,
   logoutUser,
   storeKeycloakData,
   storeUserAccessData,
-} from "@common/actions/authenticationActions";
+} from "@/actions/authenticationActions";
 
 const baseExpectedValue = {
   isAuthenticated: false,

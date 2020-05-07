@@ -8,12 +8,12 @@ import {
   detectIE,
   detectTestEnvironment,
   detectDevelopmentEnvironment,
-} from "@common/utils/environmentUtils";
-import { getStaticContentLoadingIsComplete } from "@common/selectors/staticContentSelectors";
+} from "@/utils/environmentUtils";
+import { getStaticContentLoadingIsComplete } from "@/selectors/staticContentSelectors";
 import {
   loadBulkStaticContent,
   fetchInspectors,
-} from "@common/actionCreators/staticContentActionCreator";
+} from "@/actionCreators/staticContentActionCreator";
 import DashboardRoutes from "@/routes/DashboardRoutes";
 import { AuthenticationGuard } from "@/hoc/AuthenticationGuard";
 import NavBar from "./navigation/NavBar";

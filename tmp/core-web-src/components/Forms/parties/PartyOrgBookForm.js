@@ -4,12 +4,9 @@ import { Row, Col, Form, Select, Spin, Icon, Button } from "antd";
 import debounce, { isEmpty } from "lodash";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import {
-  fetchPartyById,
-  createPartyOrgBookEntity,
-} from "@common/actionCreators/partiesActionCreator";
-import { searchOrgBook, fetchOrgBookCredential } from "@common/actionCreators/orgbookActionCreator";
-import { getSearchOrgBookResults, getOrgBookCredential } from "@common/selectors/orgbookSelectors";
+import { fetchPartyById, createPartyOrgBookEntity } from "@/actionCreators/partiesActionCreator";
+import { searchOrgBook, fetchOrgBookCredential } from "@/actionCreators/orgbookActionCreator";
+import { getSearchOrgBookResults, getOrgBookCredential } from "@/selectors/orgbookSelectors";
 import CustomPropTypes from "@/customPropTypes";
 import { ORGBOOK_ENTITY_URL } from "@/constants/routes";
 

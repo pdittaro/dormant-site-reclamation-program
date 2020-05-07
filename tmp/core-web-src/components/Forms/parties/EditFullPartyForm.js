@@ -3,15 +3,8 @@ import PropTypes from "prop-types";
 import { Field, reduxForm } from "redux-form";
 import { Form, Col, Row, Button, Popconfirm, Descriptions, Typography } from "antd";
 import { isEmpty } from "lodash";
-import {
-  required,
-  email,
-  phoneNumber,
-  postalCode,
-  maxLength,
-  number,
-} from "@common/utils/validate";
-import { normalizePhone, upperCase, resetForm, formatDateTime } from "@common/utils/helpers";
+import { required, email, phoneNumber, postalCode, maxLength, number } from "@/utils/validate";
+import { normalizePhone, upperCase, resetForm, formatDateTime } from "@/utils/helpers";
 import AuthorizationWrapper from "@/components/common/wrappers/AuthorizationWrapper";
 import * as FORM from "@/constants/forms";
 import CustomPropTypes from "@/customPropTypes";

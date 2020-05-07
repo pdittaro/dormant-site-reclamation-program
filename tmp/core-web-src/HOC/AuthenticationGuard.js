@@ -8,13 +8,13 @@ import {
   isAuthenticated,
   getKeycloak,
   getUserAccessData,
-} from "@common/selectors/authenticationSelectors";
+} from "@/selectors/authenticationSelectors";
 import {
   authenticateUser,
   storeKeycloakData,
   storeUserAccessData,
-} from "@common/actions/authenticationActions";
-import { KEYCLOAK, USER_ROLES } from "@common/constants/environment";
+} from "@/actions/authenticationActions";
+import { KEYCLOAK, USER_ROLES } from "@/constants/environment";
 import Loading from "@/components/common/Loading";
 import NullScreen from "@/components/common/NullScreen";
 

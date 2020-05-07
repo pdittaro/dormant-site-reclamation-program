@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { Button, Progress, Icon, Popconfirm } from "antd";
-import { getDocumentDownloadState } from "@common/selectors/noticeOfWorkSelectors";
+import { getDocumentDownloadState } from "@/selectors/noticeOfWorkSelectors";
 import NOWSubmissionDocuments from "@/components/noticeOfWork/applications/NOWSubmissionDocuments";
 import NOWDocuments from "../noticeOfWork/applications/NOWDocuments";
 import { COLOR } from "@/constants/styles";

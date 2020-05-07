@@ -2,7 +2,7 @@ import React from "react";
 import { Icon, Tag } from "antd";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-import * as Strings from "@common/constants/strings";
+import * as Strings from "@/constants/strings";
 import * as router from "@/constants/routes";
 import CustomPropTypes from "@/customPropTypes";
 

@@ -8,8 +8,8 @@ import {
   getDropdownMineReportStatusOptions,
   getDropdownMineReportCategoryOptions,
   getMineReportDefinitionOptions,
-} from "@common/selectors/staticContentSelectors";
-import { createDropDownList } from "@common/utils/helpers";
+} from "@/selectors/staticContentSelectors";
+import { createDropDownList } from "@/utils/helpers";
 import * as FORM from "@/constants/forms";
 import { renderConfig } from "@/components/common/config";
 import CustomPropTypes from "@/customPropTypes";

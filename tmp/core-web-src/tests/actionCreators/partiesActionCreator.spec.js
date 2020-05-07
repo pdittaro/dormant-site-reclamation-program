@@ -9,10 +9,10 @@ import {
   deleteParty,
   addDocumentToRelationship,
   createPartyOrgBookEntity,
-} from "@common/actionCreators/partiesActionCreator";
-import * as genericActions from "@common/actions/genericActions";
-import { ENVIRONMENT } from "@common/constants/environment";
-import * as API from "@common/constants/api";
+} from "@/actionCreators/partiesActionCreator";
+import * as genericActions from "@/actions/genericActions";
+import { ENVIRONMENT } from "@/constants/environment";
+import * as API from "@/constants/api";
 import * as MOCK from "../mocks/dataMocks";
 
 const dispatch = jest.fn();

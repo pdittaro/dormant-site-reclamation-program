@@ -7,10 +7,10 @@ import {
   fetchOriginalNoticeOfWorkApplication,
   updateNoticeOfWorkApplication,
   createNoticeOfWorkApplicationProgress,
-} from "@common/actionCreators/noticeOfWorkActionCreator";
-import * as genericActions from "@common/actions/genericActions";
-import { ENVIRONMENT } from "@common/constants/environment";
-import * as API from "@common/constants/api";
+} from "@/actionCreators/noticeOfWorkActionCreator";
+import * as genericActions from "@/actions/genericActions";
+import { ENVIRONMENT } from "@/constants/environment";
+import * as API from "@/constants/api";
 import * as MOCK from "@/tests/mocks/dataMocks";
 import * as NOW_MOCK from "@/tests/mocks/noticeOfWorkMocks";
 

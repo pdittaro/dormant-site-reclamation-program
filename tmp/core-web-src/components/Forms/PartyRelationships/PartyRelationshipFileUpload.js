@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Field } from "redux-form";
 import { Form } from "antd";
-import { MINE_PARTY_APPOINTMENT_DOCUMENTS } from "@common/constants/api";
+import { MINE_PARTY_APPOINTMENT_DOCUMENTS } from "@/constants/api";
 import FileUpload from "@/components/common/FileUpload";
 import { DOCUMENT, EXCEL } from "@/constants/fileTypes";
 

@@ -7,7 +7,7 @@ import {
   getBondTypeDropDownOptions,
   getBondDocumentTypeDropDownOptions,
   getBondDocumentTypeOptionsHash,
-} from "@common/selectors/staticContentSelectors";
+} from "@/selectors/staticContentSelectors";
 import BondForm from "@/components/Forms/Securities/BondForm";
 import CustomPropTypes from "@/customPropTypes";
 

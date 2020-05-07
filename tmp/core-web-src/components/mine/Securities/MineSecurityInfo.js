@@ -3,18 +3,14 @@ import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { Tabs } from "antd";
-import { fetchPermits } from "@common/actionCreators/permitActionCreator";
-import { openModal, closeModal } from "@common/actions/modalActions";
-import { getPermits } from "@common/reducers/permitReducer";
-import {
-  getBonds,
-  getBondTotals,
-  getReclamationInvoices,
-} from "@common/selectors/securitiesSelectors";
+import { fetchPermits } from "@/actionCreators/permitActionCreator";
+import { openModal, closeModal } from "@/actions/modalActions";
+import { getPermits } from "@/reducers/permitReducer";
+import { getBonds, getBondTotals, getReclamationInvoices } from "@/selectors/securitiesSelectors";
 import {
   getBondTypeOptionsHash,
   getBondStatusOptionsHash,
-} from "@common/selectors/staticContentSelectors";
+} from "@/selectors/staticContentSelectors";
 import {
   fetchMineBonds,
   createBond,
@@ -22,9 +18,9 @@ import {
   fetchMineReclamationInvoices,
   createReclamationInvoice,
   updateReclamationInvoice,
-} from "@common/actionCreators/securitiesActionCreator";
-import { getMineGuid } from "@common/selectors/mineSelectors";
-import { formatMoney } from "@common/utils/helpers";
+} from "@/actionCreators/securitiesActionCreator";
+import { getMineGuid } from "@/selectors/mineSelectors";
+import { formatMoney } from "@/utils/helpers";
 import CustomPropTypes from "@/customPropTypes";
 import MineBondTable from "@/components/mine/Securities/MineBondTable";
 import MineReclamationInvoiceTable from "@/components/mine/Securities/MineReclamationInvoiceTable";

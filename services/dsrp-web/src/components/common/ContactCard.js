@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import React from "react";
 import { Row, Col, Card, Icon, Typography } from "antd";
-import { formatDate } from "@common/utils/helpers";
+import { formatDate } from "@/utils/helpers";
 import CustomPropTypes from "@/customPropTypes";
 import * as Strings from "@/constants/strings";
 

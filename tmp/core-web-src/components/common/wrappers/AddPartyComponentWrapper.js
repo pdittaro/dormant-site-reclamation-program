@@ -7,8 +7,8 @@ import { Radio, Icon, Divider } from "antd";
 // and you need to use Refs to interact with it for a number of features. Brought in react-responsive-carousel instead.
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { createParty, setAddPartyFormState } from "@common/actionCreators/partiesActionCreator";
-import { getAddPartyFormState } from "@common/selectors/partiesSelectors";
+import { createParty, setAddPartyFormState } from "@/actionCreators/partiesActionCreator";
+import { getAddPartyFormState } from "@/selectors/partiesSelectors";
 import AddQuickPartyForm from "@/components/Forms/parties/AddQuickPartyForm";
 import LinkButton from "../LinkButton";
 
@@ -163,7 +163,4 @@ const mapDispatchToProps = (dispatch) =>
 AddPartyComponentWrapper.propTypes = propTypes;
 AddPartyComponentWrapper.defaultProps = defaultProps;
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(AddPartyComponentWrapper);
+export default connect(mapStateToProps, mapDispatchToProps)(AddPartyComponentWrapper);

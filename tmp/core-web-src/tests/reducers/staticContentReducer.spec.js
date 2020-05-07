@@ -1,9 +1,9 @@
 import {
   staticContentReducer,
   getStaticContentLoadingIsComplete,
-} from "@common/reducers/staticContentReducer";
-import { storeBulkStaticContent } from "@common/actions/staticContentActions";
-import { STATIC_CONTENT } from "@common/constants/reducerTypes";
+} from "@/reducers/staticContentReducer";
+import { storeBulkStaticContent } from "@/actions/staticContentActions";
+import { STATIC_CONTENT } from "@/constants/reducerTypes";
 import * as MOCK from "@/tests/mocks/dataMocks";
 
 const baseExpectedValue = {

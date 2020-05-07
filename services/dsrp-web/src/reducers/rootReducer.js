@@ -12,7 +12,7 @@ import {
   modalReducer,
   varianceReducer,
   orgbookReducer,
-} from "@common/reducers";
+} from "@/reducers";
 import networkReducer from "./networkReducer";
 import * as reducerTypes from "@/constants/reducerTypes";
 import authenticationReducer from "@/reducers/authenticationReducer";

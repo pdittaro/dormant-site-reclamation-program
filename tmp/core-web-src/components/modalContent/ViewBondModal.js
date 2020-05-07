@@ -2,13 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Button } from "antd";
 import { connect } from "react-redux";
-import { formatDate, formatMoney } from "@common/utils/helpers";
+import { formatDate, formatMoney } from "@/utils/helpers";
 import {
   getBondTypeOptionsHash,
   getBondStatusOptionsHash,
   getBondDocumentTypeOptionsHash,
-} from "@common/selectors/staticContentSelectors";
-import * as Strings from "@common/constants/strings";
+} from "@/selectors/staticContentSelectors";
+import * as Strings from "@/constants/strings";
 import DocumentTable from "@/components/common/DocumentTable";
 import CustomPropTypes from "@/customPropTypes";
 import Address from "@/components/common/Address";

@@ -3,8 +3,8 @@ import { bindActionCreators } from "redux";
 import { AutoComplete, Row, Col } from "antd";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import { fetchMineNameList } from "@common/actionCreators/mineActionCreator";
-import { getMineNames } from "@common/selectors/mineSelectors";
+import { fetchMineNameList } from "@/actionCreators/mineActionCreator";
+import { getMineNames } from "@/selectors/mineSelectors";
 import RenderAutoComplete from "@/components/common/RenderAutoComplete";
 import AdvancedMineSearchForm from "@/components/Forms/AdvancedMineSearchForm";
 import CustomPropTypes from "@/customPropTypes";
@@ -95,7 +95,4 @@ const mapDispatchToProps = (dispatch) =>
 MineSearch.propTypes = propTypes;
 MineSearch.defaultProps = defaultProps;
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(MineSearch);
+export default connect(mapStateToProps, mapDispatchToProps)(MineSearch);

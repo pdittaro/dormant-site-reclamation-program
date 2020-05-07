@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Table } from "antd";
-import { formatDate, truncateFilename } from "@common/utils/helpers";
-import { downloadFileFromDocumentManager } from "@common/utils/actionlessNetworkCalls";
+import { formatDate, truncateFilename } from "@/utils/helpers";
+import { downloadFileFromDocumentManager } from "@/utils/actionlessNetworkCalls";
 import * as Strings from "@/constants/strings";
 import CustomPropTypes from "@/customPropTypes";
 import LinkButton from "@/components/common/LinkButton";

@@ -3,15 +3,15 @@ import {
   getKeycloak,
   getUserAccessData,
   getUserInfo,
-} from "@common/selectors/authenticationSelectors";
-import { authenticationReducer } from "@common/reducers/authenticationReducer";
+} from "@/selectors/authenticationSelectors";
+import { authenticationReducer } from "@/reducers/authenticationReducer";
 import {
   authenticateUser,
   logoutUser,
   storeKeycloakData,
   storeUserAccessData,
-} from "@common/actions/authenticationActions";
-import { AUTHENTICATION } from "@common/constants/reducerTypes";
+} from "@/actions/authenticationActions";
+import { AUTHENTICATION } from "@/constants/reducerTypes";
 
 const mockData = {
   userAccessData: ["role1"],

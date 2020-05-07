@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { fetchMetabaseDashboard } from "@common/actionCreators/reportingActionCreator";
+import { fetchMetabaseDashboard } from "@/actionCreators/reportingActionCreator";
 import { AuthorizationGuard } from "@/hoc/AuthorizationGuard";
 import * as Permission from "@/constants/permissions";
 

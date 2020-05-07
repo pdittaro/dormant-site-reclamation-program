@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import { formatDate } from "@common/utils/helpers";
+import { formatDate } from "@/utils/helpers";
 import CoreTable from "@/components/common/CoreTable";
 import CustomPropTypes from "@/customPropTypes";
 import * as router from "@/constants/routes";

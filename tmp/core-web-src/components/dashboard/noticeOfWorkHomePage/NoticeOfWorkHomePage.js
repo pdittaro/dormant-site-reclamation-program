@@ -3,18 +3,15 @@ import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import queryString from "query-string";
-import * as Strings from "@common/constants/strings";
+import * as Strings from "@/constants/strings";
 import {
   getMineRegionHash,
   getMineRegionDropdownOptions,
   getDropdownNoticeOfWorkApplicationStatusOptions,
   getDropdownNoticeOfWorkApplicationTypeOptions,
-} from "@common/selectors/staticContentSelectors";
-import { fetchNoticeOfWorkApplications } from "@common/actionCreators/noticeOfWorkActionCreator";
-import {
-  getNoticeOfWorkList,
-  getNoticeOfWorkPageData,
-} from "@common/selectors/noticeOfWorkSelectors";
+} from "@/selectors/staticContentSelectors";
+import { fetchNoticeOfWorkApplications } from "@/actionCreators/noticeOfWorkActionCreator";
+import { getNoticeOfWorkList, getNoticeOfWorkPageData } from "@/selectors/noticeOfWorkSelectors";
 import * as routes from "@/constants/routes";
 import CustomPropTypes from "@/customPropTypes";
 import NoticeOfWorkTable from "@/components/dashboard/noticeOfWorkHomePage/NoticeOfWorkTable";

@@ -1,8 +1,8 @@
 import React from "react";
 import { PropTypes } from "prop-types";
 import { Table } from "antd";
-import { downloadNowDocument } from "@common/utils/actionlessNetworkCalls";
-import * as Strings from "@common/constants/strings";
+import { downloadNowDocument } from "@/utils/actionlessNetworkCalls";
+import * as Strings from "@/constants/strings";
 import LinkButton from "@/components/common/LinkButton";
 import { UNIQUELY_SPATIAL } from "@/constants/fileTypes";
 import NullScreen from "@/components/common/NullScreen";

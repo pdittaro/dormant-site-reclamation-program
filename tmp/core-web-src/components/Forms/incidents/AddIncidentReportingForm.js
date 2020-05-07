@@ -10,8 +10,8 @@ import {
   phoneNumber,
   maxLength,
   dateNotInFuture,
-} from "@common/utils/validate";
-import { normalizePhone } from "@common/utils/helpers";
+} from "@/utils/validate";
+import { normalizePhone } from "@/utils/helpers";
 import * as FORM from "@/constants/forms";
 import { renderConfig } from "@/components/common/config";
 import CustomPropTypes from "@/customPropTypes";

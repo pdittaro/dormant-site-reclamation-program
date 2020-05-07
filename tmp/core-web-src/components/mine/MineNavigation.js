@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { Menu, Icon } from "antd";
 import { includes } from "lodash";
-import { detectProdEnvironment } from "@common/utils/environmentUtils";
+import { detectProdEnvironment } from "@/utils/environmentUtils";
 import * as routes from "@/constants/routes";
 import CustomPropTypes from "@/customPropTypes";
 

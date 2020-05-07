@@ -6,8 +6,8 @@ import { Row, Col, Table, Button } from "antd";
 import {
   getDropdownNoticeOfWorkUndergroundExplorationTypeOptions,
   getDropdownNoticeOfWorkUnitTypeOptions,
-} from "@common/selectors/staticContentSelectors";
-import { numberWithUnitCode } from "@common/utils/validate";
+} from "@/selectors/staticContentSelectors";
+import { numberWithUnitCode } from "@/utils/validate";
 import * as FORM from "@/constants/forms";
 import { TRASHCAN } from "@/constants/assets";
 import RenderField from "@/components/common/RenderField";

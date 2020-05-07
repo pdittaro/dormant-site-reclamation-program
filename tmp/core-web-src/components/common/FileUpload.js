@@ -8,8 +8,8 @@ import "filepond/dist/filepond.min.css";
 import FilePondPluginFileValidateSize from "filepond-plugin-file-validate-size";
 import FilePondPluginFileValidateType from "filepond-plugin-file-validate-type";
 import tus from "tus-js-client";
-import { ENVIRONMENT } from "@common/constants/environment";
-import { createRequestHeader } from "@common/utils/requestHeaders";
+import { ENVIRONMENT } from "@/constants/environment";
+import { createRequestHeader } from "@/utils/requestHeaders";
 import { FLUSH_SOUND, WATER_SOUND } from "@/constants/assets";
 
 registerPlugin(FilePondPluginFileValidateSize, FilePondPluginFileValidateType);

@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Table, Popconfirm, Button } from "antd";
-import { formatDate, dateSorter, nullableStringSorter } from "@common/utils/helpers";
-import { downloadFileFromDocumentManager } from "@common/utils/actionlessNetworkCalls";
+import { formatDate, dateSorter, nullableStringSorter } from "@/utils/helpers";
+import { downloadFileFromDocumentManager } from "@/utils/actionlessNetworkCalls";
 import { TRASHCAN } from "@/constants/assets";
 import CustomPropTypes from "@/customPropTypes";
 import LinkButton from "@/components/common/LinkButton";

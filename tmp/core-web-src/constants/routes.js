@@ -1,5 +1,5 @@
 import queryString from "query-string";
-import * as Strings from "@common/constants/strings";
+import * as Strings from "@/constants/strings";
 import { isEmpty } from "lodash";
 import Home from "@/components/Home";
 import Logout from "@/components/common/Logout";

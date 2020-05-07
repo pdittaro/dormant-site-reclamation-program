@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Field, reduxForm } from "redux-form";
 import { Form, Button, Col, Icon, Row } from "antd";
-import { phoneNumber, maxLength } from "@common/utils/validate";
+import { phoneNumber, maxLength } from "@/utils/validate";
 import * as FORM from "@/constants/forms";
 import { renderConfig } from "@/components/common/config";
 import CustomPropTypes from "@/customPropTypes";

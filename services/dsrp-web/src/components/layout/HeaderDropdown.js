@@ -4,7 +4,7 @@ import { Link, withRouter } from "react-router-dom";
 import { Menu, Dropdown, Button, Icon, Divider } from "antd";
 import MediaQuery from "react-responsive";
 import PropTypes from "prop-types";
-import * as COMMON_ENV from "@common/constants/environment";
+import * as COMMON_ENV from "@/constants/environment";
 import * as route from "@/constants/routes";
 import * as MINESPACE_ENV from "@/constants/environment";
 import { signOutFromSiteMinder } from "@/utils/authenticationHelpers";

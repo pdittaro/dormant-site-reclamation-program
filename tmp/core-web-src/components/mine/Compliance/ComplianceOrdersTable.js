@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Table } from "antd";
-import { formatDate, compareCodes, formatDateTime, dateSorter } from "@common/utils/helpers";
-import { downloadNRISDocument } from "@common/utils/actionlessNetworkCalls";
+import { formatDate, compareCodes, formatDateTime, dateSorter } from "@/utils/helpers";
+import { downloadNRISDocument } from "@/utils/actionlessNetworkCalls";
 import { RED_CLOCK } from "@/constants/assets";
 import CustomPropTypes from "@/customPropTypes";
 import NullScreen from "@/components/common/NullScreen";

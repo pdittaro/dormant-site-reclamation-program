@@ -5,19 +5,15 @@ import { Element, scroller } from "react-scroll";
 import PropTypes from "prop-types";
 import { Tabs, Col, Divider, notification, Card } from "antd";
 import queryString from "query-string";
-import { openModal, closeModal } from "@common/actions/modalActions";
+import { openModal, closeModal } from "@/actions/modalActions";
 import {
   fetchMineRecords,
   createMineRecord,
   createMineTypes,
   fetchMineRecordsForMap,
   fetchMineRecordById,
-} from "@common/actionCreators/mineActionCreator";
-import {
-  getMines,
-  getMinesPageData,
-  getTransformedMineTypes,
-} from "@common/selectors/mineSelectors";
+} from "@/actionCreators/mineActionCreator";
+import { getMines, getMinesPageData, getTransformedMineTypes } from "@/selectors/mineSelectors";
 import {
   getMineRegionHash,
   getMineTenureTypesHash,
@@ -27,8 +23,8 @@ import {
   getMineRegionDropdownOptions,
   getMineTenureTypeDropdownOptions,
   getDropdownCommodityOptions,
-} from "@common/selectors/staticContentSelectors";
-import * as Strings from "@common/constants/strings";
+} from "@/selectors/staticContentSelectors";
+import * as Strings from "@/constants/strings";
 import ResponsivePagination from "@/components/common/ResponsivePagination";
 import CustomPropTypes from "@/customPropTypes";
 import MineList from "@/components/dashboard/minesHomePage/MineList";

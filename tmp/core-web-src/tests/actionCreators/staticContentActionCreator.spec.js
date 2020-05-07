@@ -1,9 +1,9 @@
 import MockAdapter from "axios-mock-adapter";
 import axios from "axios";
-import { loadBulkStaticContent } from "@common/actionCreators/staticContentActionCreator";
-import * as genericActions from "@common/actions/genericActions";
-import { ENVIRONMENT } from "@common/constants/environment";
-import * as API from "@common/constants/api";
+import { loadBulkStaticContent } from "@/actionCreators/staticContentActionCreator";
+import * as genericActions from "@/actions/genericActions";
+import { ENVIRONMENT } from "@/constants/environment";
+import * as API from "@/constants/api";
 import * as MOCK from "@/tests/mocks/dataMocks";
 
 const dispatch = jest.fn();

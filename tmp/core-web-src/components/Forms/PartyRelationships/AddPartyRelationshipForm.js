@@ -6,7 +6,7 @@ import moment from "moment";
 import { isEmpty } from "lodash";
 import { Field, reduxForm, formValueSelector } from "redux-form";
 import { Form, Button, Col, Row, Popconfirm } from "antd";
-import { required, validateDateRanges } from "@common/utils/validate";
+import { required, validateDateRanges } from "@/utils/validate";
 import { renderConfig } from "@/components/common/config";
 import PartySelectField from "@/components/common/PartySelectField";
 import * as FORM from "@/constants/forms";
