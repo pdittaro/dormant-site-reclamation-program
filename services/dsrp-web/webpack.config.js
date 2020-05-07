@@ -75,7 +75,7 @@ const commonConfig = merge([
   },
   parts.setEnvironmentVariable(envFile),
   parts.loadJS({
-    include: [PATHS.src, PATHS.commonPackage],
+    include: [PATHS.src],
   }),
   parts.loadFonts({
     include: path.join(PATHS.src, "assets", "fonts"),
