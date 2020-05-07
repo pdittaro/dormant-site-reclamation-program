@@ -9,7 +9,7 @@ if ENV_FILE:
 class Config(object):
     # Environment config
     FLASK_LOGGING_LEVEL = os.environ.get('FLASK_LOGGING_LEVEL',
-                                         'INFO')                # ['DEBUG','INFO','WARN','ERROR','CRITICAL']
+                                         'INFO')  # ['DEBUG','INFO','WARN','ERROR','CRITICAL']
 
     LOGGING_DICT_CONFIG = {
         'version': 1,
@@ -39,8 +39,7 @@ class Config(object):
     DB_PORT = os.environ.get('DB_PORT', 5432)
     DB_NAME = os.environ.get('DB_NAME', 'db_name')
     DB_URL = "postgresql://{0}:{1}@{2}:{3}/{4}".format(DB_USER, DB_PASS, DB_HOST, DB_PORT, DB_NAME)
-    NRIS_USER_NAME = os.environ.get('NRIS_USER_NAME', None)
-    NRIS_PASS = os.environ.get('NRIS_PASS', None)
+
     ENVIRONMENT_NAME = os.environ.get('ENVIRONMENT_NAME', 'dev')
     SQLALCHEMY_DATABASE_URI = DB_URL
     JWT_OIDC_WELL_KNOWN_CONFIG = os.environ.get(
@@ -49,13 +48,7 @@ class Config(object):
     JWT_OIDC_AUDIENCE = os.environ.get('JWT_OIDC_AUDIENCE', 'mds')
     JWT_OIDC_ALGORITHMS = os.environ.get('JWT_OIDC_ALGORITHMS', 'RS256')
 
-    LDAP_IDIR_USERNAME = os.environ.get('LDAP_IDIR_USERNAME', "idir_username")
-    LDAP_IDIR_PASSWORD = os.environ.get('LDAP_IDIR_PASSWORD', "idir_password")
-
-    METABASE_SITE_URL = os.environ.get('METABASE_SITE_URL', None)
-    METABASE_EMBEDDING_SECRET_KEY = os.environ.get('METABASE_EMBEDDING_SECRET_KEY', None)
-
-    BUNDLE_ERRORS = True     #RequestParser global config
+    BUNDLE_ERRORS = True  #RequestParser global config
 
     def JWT_ROLE_CALLBACK(jwt_dict):
         return (jwt_dict['realm_access']['roles'])
@@ -63,19 +56,6 @@ class Config(object):
     # Below enables functionalty we PR'd into the JWT_OIDC library to add caching
     JWT_OIDC_CACHING_ENABLED = True
 
-    # Microservice URLs
-    DOCUMENT_MANAGER_URL = os.environ.get('DOCUMENT_MANAGER_URL',
-                                          'http://document_manager_backend:5001')
-    DOCUMENT_GENERATOR_URL = os.environ.get('DOCUMENT_GENERATOR_URL', 'http://docgen-api:3030')
-    NRIS_TOKEN_URL = os.environ.get('NRIS_TOKEN_URL', None)
-    NRIS_API_URL = os.environ.get('NRIS_API_URL', 'http://nris_backend:5500')
-    # Cache settings
-    CACHE_TYPE = os.environ.get('CACHE_TYPE', 'redis')
-    CACHE_REDIS_HOST = os.environ.get('CACHE_REDIS_HOST', 'redis')
-    CACHE_REDIS_PORT = os.environ.get('CACHE_REDIS_PORT', 6379)
-    CACHE_REDIS_PASS = os.environ.get('CACHE_REDIS_PASS', 'keycloak-password')
-    CACHE_REDIS_URL = 'redis://:{0}@{1}:{2}'.format(CACHE_REDIS_PASS, CACHE_REDIS_HOST,
-                                                    CACHE_REDIS_PORT)
     #removing flask restplus default header mask for swagger.
     RESTPLUS_MASK_SWAGGER = False
 
@@ -84,33 +64,6 @@ class Config(object):
     COMPRESS_LEVEL = 9
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SQLALCHEMY_ENGINE_OPTIONS = {'pool_timeout': 300, 'max_overflow': 20}
-
-    # Elastic config
-    ELASTIC_ENABLED = os.environ.get('ELASTIC_ENABLED', '0')
-    ELASTIC_SERVICE_NAME = os.environ.get('ELASTIC_SERVICE_NAME', 'Local-Dev')
-    ELASTIC_SECRET_TOKEN = os.environ.get('ELASTIC_SECRET_TOKEN', None)
-    ELASTIC_SERVER_URL = os.environ.get('ELASTIC_SERVER_URL', 'http://localhost:8200')
-    ELASTIC_DEBUG = os.environ.get('ELASTIC_DEBUG', False)
-    ELASTIC_APM = {
-        'SERVICE_NAME': ELASTIC_SERVICE_NAME,
-        'SECRET_TOKEN': ELASTIC_SECRET_TOKEN,
-        'SERVER_URL': ELASTIC_SERVER_URL,
-        'DEBUG': ELASTIC_DEBUG,
-    }
-
-    # NROS
-    NROS_CLIENT_SECRET = os.environ.get('NROS_CLIENT_SECRET', None)
-    NROS_CLIENT_ID = os.environ.get('NROS_CLIENT_ID', None)
-    NROS_TOKEN_URL = os.environ.get('NROS_TOKEN_URL', None)
-
-    # vFCBC
-    VFCBC_CLIENT_SECRET = os.environ.get('VFCBC_CLIENT_SECRET', None)
-    VFCBC_CLIENT_ID = os.environ.get('VFCBC_CLIENT_ID', None)
-
-    # NRIS
-    NRIS_REMOTE_CLIENT_SECRET = os.environ.get('NRIS_REMOTE_CLIENT_SECRET', None)
-    NRIS_REMOTE_CLIENT_ID = os.environ.get('NRIS_REMOTE_CLIENT_ID', None)
-    NRIS_REMOTE_TOKEN_URL = os.environ.get('NRIS_REMOTE_TOKEN_URL', None)
 
     # OrgBook
     ORGBOOK_API_URL = os.environ.get('ORGBOOK_API_URL', 'https://orgbook.gov.bc.ca/api/v2/')
