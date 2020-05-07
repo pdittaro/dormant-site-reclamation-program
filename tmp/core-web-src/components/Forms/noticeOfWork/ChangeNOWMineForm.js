@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { reduxForm, Field } from "redux-form";
 import { Form, Button, Col, Row, Popconfirm } from "antd";
 import { resetForm } from "@common/utils/helpers";
-import { required } from "@common/utils/Validate";
+import { required } from "@common/utils/validate";
 import * as FORM from "@/constants/forms";
 import RenderMineSelect from "@/components/common/RenderMineSelect";
 

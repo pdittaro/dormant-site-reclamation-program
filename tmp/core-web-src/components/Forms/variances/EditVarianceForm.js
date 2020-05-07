@@ -5,7 +5,7 @@ import { fromPairs } from "lodash";
 import { connect } from "react-redux";
 import { compose } from "redux";
 import { Form, Button, Popconfirm, Row, Col } from "antd";
-import { required } from "@common/utils/Validate";
+import { required } from "@common/utils/validate";
 import { resetForm } from "@common/utils/helpers";
 import * as String from "@common/constants/strings";
 import * as FORM from "@/constants/forms";

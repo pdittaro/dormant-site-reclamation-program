@@ -1,7 +1,7 @@
 import React from "react";
 import { Field } from "redux-form";
 import { Form, Col, Row } from "antd";
-import { required } from "@common/utils/Validate";
+import { required } from "@common/utils/validate";
 import { createDropDownList } from "@common/utils/helpers";
 import { renderConfig } from "@/components/common/config";
 import CustomPropTypes from "@/customPropTypes";

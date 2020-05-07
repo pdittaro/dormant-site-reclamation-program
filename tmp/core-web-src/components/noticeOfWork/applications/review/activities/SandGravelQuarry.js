@@ -3,7 +3,7 @@ import { PropTypes } from "prop-types";
 import { Field, Fields, formValueSelector } from "redux-form";
 import { connect } from "react-redux";
 import { Row, Col, Table, Button } from "antd";
-import { maxLength, number, numberWithUnitCode } from "@common/utils/Validate";
+import { maxLength, number, numberWithUnitCode } from "@common/utils/validate";
 import { getDropdownNoticeOfWorkUnitTypeOptions } from "@common/selectors/staticContentSelectors";
 import * as FORM from "@/constants/forms";
 import { TRASHCAN } from "@/constants/assets";

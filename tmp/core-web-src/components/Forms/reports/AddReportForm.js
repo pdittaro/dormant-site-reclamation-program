@@ -8,7 +8,7 @@ import { Field, reduxForm, formValueSelector } from "redux-form";
 import { Form, Button, Col, Row, Popconfirm, List } from "antd";
 import { renderConfig } from "@/components/common/config";
 import * as FORM from "@/constants/forms";
-import { required } from "@common/utils/Validate";
+import { required } from "@common/utils/validate";
 import {
   resetForm,
   createDropDownList,

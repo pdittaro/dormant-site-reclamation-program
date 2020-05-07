@@ -5,7 +5,7 @@ import * as partyActions from "../actions/partyActions";
 import * as String from "../constants/strings";
 import * as API from "../constants/API";
 import { ENVIRONMENT } from "../constants/environment";
-import { createRequestHeader } from "../utils/RequestHeaders";
+import { createRequestHeader } from "../utils/requestHeaders";
 import CustomAxios from "../customAxios";
 
 export const loadBulkStaticContent = () => (dispatch) => {

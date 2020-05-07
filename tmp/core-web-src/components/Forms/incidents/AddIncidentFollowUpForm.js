@@ -7,7 +7,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Field, reduxForm, FieldArray } from "redux-form";
 import { Form, Col, Row, Icon } from "antd";
-import { required, dateNotInFuture } from "@common/utils/Validate";
+import { required, dateNotInFuture } from "@common/utils/validate";
 import { MINE_INCIDENT_DOCUMENT } from "@common/constants/API";
 import * as Strings from "@common/constants/strings";
 import * as FORM from "@/constants/forms";

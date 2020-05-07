@@ -10,7 +10,7 @@ import { getLastCreatedParty } from "@common/selectors/partiesSelectors";
 import { fetchSearchResults } from "@common/actionCreators/searchActionCreator";
 import { setAddPartyFormState } from "@common/actionCreators/partiesActionCreator";
 import { createItemMap, createItemIdsArray } from "@common/utils/helpers";
-import { Validate } from "@common/utils/Validate";
+import { Validate } from "@common/utils/validate";
 import RenderLargeSelect from "./RenderLargeSelect";
 import LinkButton from "@/components/common/LinkButton";
 import CustomPropTypes from "@/customPropTypes";

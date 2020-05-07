@@ -4,7 +4,7 @@ import { compose } from "redux";
 import { connect } from "react-redux";
 import { reduxForm, Field, formValueSelector } from "redux-form";
 import { Form, Button, Col, Row, Popconfirm, Badge } from "antd";
-import { required, lat, lon } from "@common/utils/Validate";
+import { required, lat, lon } from "@common/utils/validate";
 import { resetForm } from "@common/utils/helpers";
 import CustomPropTypes from "@/customPropTypes";
 import * as FORM from "@/constants/forms";

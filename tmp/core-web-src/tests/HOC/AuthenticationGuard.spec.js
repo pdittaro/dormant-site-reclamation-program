@@ -1,6 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
-import { AuthenticationGuard } from "@/HOC/AuthenticationGuard";
+import { AuthenticationGuard } from "@/hoc/AuthenticationGuard";
 import NullScreen from "@/components/common/NullScreen";
 import Loading from "@/components/common/Loading";
 import * as Mock from "@/tests/mocks/dataMocks";

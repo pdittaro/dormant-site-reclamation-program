@@ -10,7 +10,7 @@ import {
   phoneNumber,
   maxLength,
   dateNotInFuture,
-} from "@common/utils/Validate";
+} from "@common/utils/validate";
 import { normalizePhone } from "@common/utils/helpers";
 import * as FORM from "@/constants/forms";
 import { renderConfig } from "@/components/common/config";

@@ -4,7 +4,7 @@ import * as reducerTypes from "../constants/reducerTypes";
 import * as orgbookActions from "../actions/orgbookActions";
 import * as API from "../constants/API";
 import { ENVIRONMENT } from "../constants/environment";
-import { createRequestHeader } from "../utils/RequestHeaders";
+import { createRequestHeader } from "../utils/requestHeaders";
 import CustomAxios from "../customAxios";
 
 export const searchOrgBook = (search) => (dispatch) => {

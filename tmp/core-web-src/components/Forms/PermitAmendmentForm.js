@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { remove } from "lodash";
 import { Field, reduxForm, change } from "redux-form";
 import { Form, Button, Col, Row, Popconfirm } from "antd";
-import { required, maxLength, dateNotInFuture, number } from "@common/utils/Validate";
+import { required, maxLength, dateNotInFuture, number } from "@common/utils/validate";
 import { resetForm, currencyMask } from "@common/utils/helpers";
 import { renderConfig } from "@/components/common/config";
 import PartySelectField from "@/components/common/PartySelectField";

@@ -3,7 +3,7 @@ import { Table, Row, Col, Divider } from "antd";
 import PropTypes from "prop-types";
 import Highlight from "react-highlighter";
 import { Link } from "react-router-dom";
-import { Validate } from "@common/utils/Validate";
+import { Validate } from "@common/utils/validate";
 import * as Strings from "@common/constants/strings";
 import * as router from "@/constants/routes";
 

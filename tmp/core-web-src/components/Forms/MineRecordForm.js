@@ -13,7 +13,7 @@ import {
   number,
   lat,
   lon,
-} from "@common/utils/Validate";
+} from "@common/utils/validate";
 import { getCurrentMineTypes } from "@common/selectors/mineSelectors";
 import {
   getConditionalDisturbanceOptionsHash,

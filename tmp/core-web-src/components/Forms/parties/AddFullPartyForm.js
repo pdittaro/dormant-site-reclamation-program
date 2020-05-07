@@ -9,7 +9,7 @@ import {
   maxLength,
   number,
   postalCode,
-} from "@common/utils/Validate";
+} from "@common/utils/validate";
 import { normalizePhone, upperCase } from "@common/utils/helpers";
 import * as FORM from "@/constants/forms";
 import CustomPropTypes from "@/customPropTypes";

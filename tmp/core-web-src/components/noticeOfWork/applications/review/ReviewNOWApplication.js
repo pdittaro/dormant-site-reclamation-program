@@ -19,7 +19,7 @@ import {
   number,
   requiredRadioButton,
   currency,
-} from "@common/utils/Validate";
+} from "@common/utils/validate";
 import CustomPropTypes from "@/customPropTypes";
 import RenderField from "@/components/common/RenderField";
 import RenderDate from "@/components/common/RenderDate";

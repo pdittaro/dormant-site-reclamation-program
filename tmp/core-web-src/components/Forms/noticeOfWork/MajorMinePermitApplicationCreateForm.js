@@ -4,7 +4,7 @@ import { reduxForm, Field } from "redux-form";
 import { Form, Button, Col, Row } from "antd";
 import { compose } from "redux";
 import { connect } from "react-redux";
-import { required } from "@common/utils/Validate";
+import { required } from "@common/utils/validate";
 import { resetForm } from "@common/utils/helpers";
 import { getDropdownNoticeOfWorkApplicationTypeOptions } from "@common/selectors/staticContentSelectors";
 import * as FORM from "@/constants/forms";

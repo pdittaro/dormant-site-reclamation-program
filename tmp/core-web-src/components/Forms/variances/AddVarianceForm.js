@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Field, reduxForm, change } from "redux-form";
 import { fromPairs } from "lodash";
 import { Form, Button, Popconfirm, Radio } from "antd";
-import { required, dateNotInFuture, maxLength } from "@common/utils/Validate";
+import { required, dateNotInFuture, maxLength } from "@common/utils/validate";
 import { resetForm } from "@common/utils/helpers";
 import * as FORM from "@/constants/forms";
 import { renderConfig } from "@/components/common/config";

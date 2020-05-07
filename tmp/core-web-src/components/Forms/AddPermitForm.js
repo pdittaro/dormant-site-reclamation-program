@@ -5,7 +5,7 @@ import { remove } from "lodash";
 import PropTypes from "prop-types";
 import { Field, reduxForm, change, formValueSelector } from "redux-form";
 import { Form, Button, Col, Row, Popconfirm } from "antd";
-import { required, dateNotInFuture, maxLength } from "@common/utils/Validate";
+import { required, dateNotInFuture, maxLength } from "@common/utils/validate";
 import { resetForm } from "@common/utils/helpers";
 import { getDropdownPermitStatusOptions } from "@common/selectors/staticContentSelectors";
 import { renderConfig } from "@/components/common/config";

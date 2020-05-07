@@ -10,7 +10,7 @@ import {
   postalCode,
   maxLength,
   number,
-} from "@common/utils/Validate";
+} from "@common/utils/validate";
 import { normalizePhone, upperCase, resetForm, formatDateTime } from "@common/utils/helpers";
 import AuthorizationWrapper from "@/components/common/wrappers/AuthorizationWrapper";
 import * as FORM from "@/constants/forms";

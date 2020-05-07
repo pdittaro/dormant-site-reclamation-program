@@ -1,7 +1,7 @@
 import React from "react";
 import { Field } from "redux-form";
 import { currencyMask } from "@common/utils/helpers";
-import { required, number, currency } from "@common/utils/Validate";
+import { required, number, currency } from "@common/utils/validate";
 import { renderConfig } from "@/components/common/config";
 import CustomPropTypes from "@/customPropTypes";
 
