@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Field, reduxForm } from "redux-form";
 import { Form, Col, Row } from "antd";
 import { required, maxLength, number, dateNotInFuture } from "@common/utils/validate";
-import { MINE_INCIDENT_DOCUMENT } from "@common/constants/API";
+import { MINE_INCIDENT_DOCUMENT } from "@common/constants/api";
 import * as Strings from "@common/constants/strings";
 import CustomPropTypes from "@/customPropTypes";
 import * as FORM from "@/constants/forms";

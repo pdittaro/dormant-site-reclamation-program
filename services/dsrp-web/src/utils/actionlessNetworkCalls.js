@@ -1,7 +1,7 @@
 import CustomAxios from "../customAxios";
 import { createRequestHeader } from "./requestHeaders";
 import { ENVIRONMENT } from "../constants/environment";
-import { DOCUMENT_MANAGER_FILE_GET_URL, DOCUMENT_MANAGER_TOKEN_GET_URL } from "../constants/API";
+import { DOCUMENT_MANAGER_FILE_GET_URL, DOCUMENT_MANAGER_TOKEN_GET_URL } from "../constants/api";
 
 export const downloadFileFromDocumentManager = ({ document_manager_guid, document_name = "" }) => {
   if (!document_manager_guid) {

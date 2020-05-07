@@ -7,7 +7,7 @@ import { Form, Button, Col, Row, Popconfirm } from "antd";
 import { required, maxLength } from "@common/utils/validate";
 import { resetForm } from "@common/utils/helpers";
 import { getDropdownNoticeOfWorkApplicationDocumentTypeOptions } from "@common/selectors/staticContentSelectors";
-import { NOTICE_OF_WORK_DOCUMENT } from "@common/constants/API";
+import { NOTICE_OF_WORK_DOCUMENT } from "@common/constants/api";
 import { renderConfig } from "@/components/common/config";
 import * as FORM from "@/constants/forms";
 import CustomPropTypes from "@/customPropTypes";

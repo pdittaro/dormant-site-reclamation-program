@@ -3,7 +3,7 @@ import axios from "axios";
 import { fetchMineComplianceInfo } from "@common/actionCreators/complianceActionCreator";
 import * as genericActions from "@common/actions/genericActions";
 import { ENVIRONMENT } from "@common/constants/environment";
-import * as API from "@common/constants/API";
+import * as API from "@common/constants/api";
 import * as MOCK from "@/tests/mocks/dataMocks";
 
 const dispatch = jest.fn();

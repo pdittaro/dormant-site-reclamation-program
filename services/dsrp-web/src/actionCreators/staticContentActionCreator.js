@@ -3,7 +3,7 @@ import * as reducerTypes from "../constants/reducerTypes";
 import * as staticContentActions from "../actions/staticContentActions";
 import * as partyActions from "../actions/partyActions";
 import * as String from "../constants/strings";
-import * as API from "../constants/API";
+import * as API from "../constants/api";
 import { ENVIRONMENT } from "../constants/environment";
 import { createRequestHeader } from "../utils/requestHeaders";
 import CustomAxios from "../customAxios";

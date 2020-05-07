@@ -4,8 +4,8 @@ import { error, request, success } from "@common/actions/genericActions";
 import { ENVIRONMENT } from "@common/constants/environment";
 import { createRequestHeader } from "@common/utils/requestHeaders";
 import CustomAxios from "@common/customAxios";
-import * as COMMON_API from "@common/constants/API";
-import * as API from "@/constants/API";
+import * as COMMON_API from "@common/constants/api";
+import * as API from "@/constants/api";
 import * as reducerTypes from "@/constants/reducerTypes";
 import * as documentActions from "@/actions/documentActions";
 

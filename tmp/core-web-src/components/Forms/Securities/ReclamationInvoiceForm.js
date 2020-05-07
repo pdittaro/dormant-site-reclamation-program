@@ -4,7 +4,7 @@ import { Field, reduxForm } from "redux-form";
 import { Form, Button, Col, Row, Popconfirm } from "antd";
 import { required, number, currency } from "@common/utils/validate";
 import { currencyMask } from "@common/utils/helpers";
-import { RECLAMATION_INVOICE_DOCUMENTS } from "@common/constants/API";
+import { RECLAMATION_INVOICE_DOCUMENTS } from "@common/constants/api";
 import RenderField from "@/components/common/RenderField";
 import * as FORM from "@/constants/forms";
 import DocumentTable from "@/components/common/DocumentTable";

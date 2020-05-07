@@ -12,7 +12,7 @@ import {
 } from "@common/actionCreators/partiesActionCreator";
 import * as genericActions from "@common/actions/genericActions";
 import { ENVIRONMENT } from "@common/constants/environment";
-import * as API from "@common/constants/API";
+import * as API from "@common/constants/api";
 import * as MOCK from "../mocks/dataMocks";
 
 const dispatch = jest.fn();
@@ -178,8 +178,9 @@ describe("`setAddPartyFormState` action creator", () => {
 });
 
 describe("`fetchInspectors` action creator", () => {
-  const url = `${ENVIRONMENT.apiUrl +
-    API.PARTIES_LIST_QUERY({ per_page: "all", business_role: "INS" })}`;
+  const url = `${
+    ENVIRONMENT.apiUrl + API.PARTIES_LIST_QUERY({ per_page: "all", business_role: "INS" })
+  }`;
   it("Request successful, dispatches `success` with correct response", () => {
     const mockResponse = { data: { success: true } };
     mockAxios.onGet(url).reply(200, mockResponse);
