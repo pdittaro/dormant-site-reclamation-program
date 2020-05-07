@@ -1,9 +1,8 @@
 💾 Backend:
-  - services/core-api/**/*
+  - services/dsrp-api/**/*
 
 💻 Frontend:
-  - services/core-web/**/*
-  - services/minespace-web/**/*
+  - services/dsrp-web/**/*
 
 🏭 CI/CD:
   - openshift/**/*
