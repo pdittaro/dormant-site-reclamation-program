@@ -141,7 +141,7 @@
       "**/common/**/*.js",
       "**/src/**/*.js",
       "!src/index.js",
-      "!src/App.js",
+      "!src/app.js",
       "!src/fetchEnv.js",
       "!src/assetsTransformer.js",
       "!src/setupTests.js"

@@ -3,10 +3,10 @@ import PropTypes from "prop-types";
 import { Field, reduxForm, change } from "redux-form";
 import { remove } from "lodash";
 import { Form, Button, Popconfirm, Typography } from "antd";
-import * as FORM from "@/constants/forms";
-import { renderConfig } from "@/components/common/config";
 import { required, maxLength } from "@common/utils/validate";
 import { resetForm } from "@common/utils/helpers";
+import * as FORM from "@/constants/forms";
+import { renderConfig } from "@/components/common/config";
 import CustomPropTypes from "@/customPropTypes";
 import VarianceFileUpload from "@/components/Forms/variances/VarianceFileUpload";
 
