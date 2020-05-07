@@ -46,7 +46,7 @@ exports[`LandingPage renders properly 1`] = `
         type="primary"
       >
         <a
-          href="<URL>http://localhostundefined/return-page?type=login&kc_idp_hint=idir"
+          href="<URL>undefined&kc_idp_hint=idir"
         >
           Log in
         </a>
@@ -180,10 +180,8 @@ exports[`LandingPage renders properly 1`] = `
       <Paragraph>
         Contact us at 
         <a
-          href="mailto:mds@gov.bc.ca"
-        >
-          mds@gov.bc.ca
-        </a>
+          href="mailto:undefined"
+        />
          to request access to MineSpace.
       </Paragraph>
       <Paragraph
@@ -280,10 +278,8 @@ exports[`LandingPage renders properly 1`] = `
             <Paragraph>
               Email us at 
               <a
-                href="mailto:mds@gov.bc.ca"
-              >
-                mds@gov.bc.ca
-              </a>
+                href="mailto:undefined"
+              />
               .
             </Paragraph>
           </Col>

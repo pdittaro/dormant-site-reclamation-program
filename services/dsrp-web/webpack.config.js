@@ -22,7 +22,6 @@ const PATHS = {
   template: path.join(__dirname, "public", "index.html"),
   build: path.join(__dirname, BUILD_DIR),
   node_modules: path.join(__dirname, "node_modules"),
-  commonPackage: path.join(__dirname, "common"),
 };
 
 const BUILD_FILE_NAMES = {
@@ -32,10 +31,9 @@ const BUILD_FILE_NAMES = {
   assets: "assets/[name].[hash:4].[ext]",
 };
 
+// Put your aliases here
 const PATH_ALIASES = {
   "@": PATHS.src,
-  "@common": PATHS.commonPackage,
-  // Put your aliases here
 };
 
 const envFile = {};

@@ -28,46 +28,6 @@ exports[`PrivateRoutes  renders properly 1`] = `
     exact={true}
     path="/return-page"
   />
-   */}
-  <Route
-    component={
-      Object {
-        "$$typeof": Symbol(react.memo),
-        "WrappedComponent": [Function],
-        "compare": null,
-        "displayName": "Connect(authenticationGuard)",
-        "type": [Function],
-      }
-    }
-    exact={true}
-    path="/mines"
-  />
-  <Route
-    component={
-      Object {
-        "$$typeof": Symbol(react.memo),
-        "WrappedComponent": [Function],
-        "compare": null,
-        "displayName": "Connect(authenticationGuard)",
-        "type": [Function],
-      }
-    }
-    exact={true}
-    path="/users"
-  />
-  <Route
-    component={
-      Object {
-        "$$typeof": Symbol(react.memo),
-        "WrappedComponent": [Function],
-        "compare": null,
-        "displayName": "Connect(authenticationGuard)",
-        "type": [Function],
-      }
-    }
-    exact={true}
-    path="/mines/:id/:activeTab"
-  />
   <Route
     render={[Function]}
   />
