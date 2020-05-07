@@ -1,6 +1,6 @@
 import { createStore } from "redux";
-import { authenticateUser } from "@common/actions/authenticationActions";
-import * as reducerTypes from "@common/constants/reducerTypes";
+import { authenticateUser } from "@/actions/authenticationActions";
+import * as reducerTypes from "@/constants/reducerTypes";
 import { rootReducer, reducerObject } from "@/reducers/rootReducer";
 
 describe("Store", () => {

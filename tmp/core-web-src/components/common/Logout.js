@@ -5,8 +5,8 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { Button, notification } from "antd";
 
-import { getKeycloak } from "@common/selectors/authenticationSelectors";
-import { logoutUser } from "@common/actions/authenticationActions";
+import { getKeycloak } from "@/selectors/authenticationSelectors";
+import { logoutUser } from "@/actions/authenticationActions";
 import * as router from "@/constants/routes";
 
 import { LOGO_PURPLE } from "@/constants/assets";
@@ -70,7 +70,4 @@ const mapDispatchToProps = (dispatch) =>
 
 Logout.propTypes = propTypes;
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Logout);
+export default connect(mapStateToProps, mapDispatchToProps)(Logout);

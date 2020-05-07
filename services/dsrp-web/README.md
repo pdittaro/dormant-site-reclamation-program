@@ -1,4 +1,4 @@
-# MineSpace
+# Dormant Site Reclamation Project
 
 The project uses a [Node.js (v10)](https://nodejs.org/en/) runtime environment and [React.js](https://reactjs.org/) library for the frontend.
 
@@ -108,14 +108,14 @@ make frontend
 
 This application requires a test BCeID in order to login and contribute locally.
 
-NOTE: MineSpace is using the same Keycloak client as CORE, thus if the user is currently authenticated through CORE with an IDIR, the session will persist on MineSpace.
+NOTE: Dormant Site Reclamation Project is using the same Keycloak client as CORE, thus if the user is currently authenticated through CORE with an IDIR, the session will persist on Dormant Site Reclamation Project.
 
-This is a known issue, knowing that Ministry staff will not be interacting with MineSpace and Proponents will not be interacting with CORE, it has been de-prioritized as it only affects the Dev team.
+This is a known issue, knowing that Ministry staff will not be interacting with Dormant Site Reclamation Project and Proponents will not be interacting with CORE, it has been de-prioritized as it only affects the Dev team.
 
 To avoid having permission issues:
 
-- Do not have test CORE and test MineSpace authenticated on the same browser
-- Open MineSpace in an incognito window, or clear the browser cashe.
+- Do not have test CORE and test Dormant Site Reclamation Project authenticated on the same browser
+- Open Dormant Site Reclamation Project in an incognito window, or clear the browser cashe.
 
 ## Code Contribution Standards
 
@@ -153,7 +153,7 @@ npm run lint:file ./filepath -- --fix
 
 Developers are encouraged to install the Prettier plugin appropriate for their
 editor. This ensures that all committed code is properly formatted. VS Code is
-commonly used by MDS contributors, so it will be used as an example for setting
+commonly used by DUCK contributors, so it will be used as an example for setting
 up formatting on-save:
 
 1. Install the VS Code Prettier [plugin](https://github.com/prettier/prettier-vscode)

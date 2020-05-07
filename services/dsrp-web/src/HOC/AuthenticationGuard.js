@@ -11,16 +11,17 @@ import {
 } from "@/actionCreators/authenticationActionCreator";
 import UnauthenticatedNotice from "@/components/common/UnauthenticatedNotice";
 import Loading from "@/components/common/Loading";
-import * as COMMON_ENV from "@common/constants/environment";
 import * as route from "@/constants/routes";
 import * as ENV from "@/constants/environment";
 
 /**
  * @constant authenticationGuard - a Higher Order Component Thats checks for user authorization and returns the App component if the user is Authenticated.
- * CORE/IDIR users are authenticated programmatically when MineSpace mounts,
+ * CORE/IDIR users are authenticated programmatically when Dormant Site Reclamation Project mounts,
  */
 
 const propTypes = {
+  getUserInfoFromToken: PropTypes.func.isRequired,
+  authenticateUser: PropTypes.func.isRequired,
   getUserInfoFromToken: PropTypes.func.isRequired,
   isAuthenticated: PropTypes.bool.isRequired,
 };
@@ -44,14 +45,16 @@ export const AuthenticationGuard = (isPublic) => (WrappedComponent) => {
       const authenticatingFromCoreFlag = localStorage.getItem("authenticatingFromCoreFlag");
       const token = localStorage.getItem("jwt");
       const { code, type, redirectingFromCore } = queryString.parse(window.location.search);
-      const redirectUrl = `${ENV.WINDOW_LOCATION}${route.MINE_DASHBOARD.dynamicRoute(guid)}`;
 
-      // all routing from core includes 'redirectingFromCore=true', if the user is not authenticated on MineSpace yet, redirect to the Keycloak Login
+      // NOTE: Redirect to a more appropriate page in the future:
+      const redirectUrl = `${ENV.WINDOW_LOCATION}${route.HOME.dynamicRoute(guid)}`;
+
+      // all routing from core includes 'redirectingFromCore=true', if the user is not authenticated on Dormant Site Reclamation Project yet, redirect to the Keycloak Login
       if (redirectingFromCore && !token) {
-        window.location.replace(`${COMMON_ENV.KEYCLOAK.loginURL}${redirectUrl}`);
+        window.location.replace(`${ENV.KEYCLOAK.loginURL}${redirectUrl}`);
       }
 
-      // after successful login, re-direct back to MineSpace with a code, swap code for token and authenticate IDIR user
+      // after successful login, re-direct back to Dormant Site Reclamation Project with a code, swap code for token and authenticate IDIR user
       // set state in local Storage to persist login flow between redirects
       // value is removed from localStorage after userInfo is obtained
       // if type=true, Login is occurring through standard flow, bypass this block

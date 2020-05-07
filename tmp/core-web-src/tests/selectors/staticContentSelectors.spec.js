@@ -47,8 +47,8 @@ import {
   getBondStatusOptionsHash,
   getBondTypeOptionsHash,
   getBondDocumentTypeOptionsHash,
-} from "@common/selectors/staticContentSelectors";
-import { STATIC_CONTENT } from "@common/constants/reducerTypes";
+} from "@/selectors/staticContentSelectors";
+import { STATIC_CONTENT } from "@/constants/reducerTypes";
 import * as Mock from "@/tests/mocks/dataMocks";
 import * as NOW_MOCK from "@/tests/mocks/noticeOfWorkMocks";
 

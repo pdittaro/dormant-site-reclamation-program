@@ -1,11 +1,5 @@
 import { REQUEST, SUCCESS, ERROR } from "../constants/actionTypes";
 
-/**
- * @file networkReducer.js
- * Data is not associated with this reducer, only the network
- * request status.
- */
-
 const initialState = {
   isFetching: false,
   isSuccessful: false,
@@ -13,7 +7,7 @@ const initialState = {
   requestType: null,
 };
 
-const networkReducer = (state = initialState, action) => {
+export const networkReducer = (state = initialState, action) => {
   switch (action.type) {
     case REQUEST:
       return {

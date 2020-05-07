@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { formatTitleString, formatDate } from "@common/utils/helpers";
+import { formatTitleString, formatDate } from "@/utils/helpers";
 import CustomPropTypes from "@/customPropTypes";
 
 const propTypes = {

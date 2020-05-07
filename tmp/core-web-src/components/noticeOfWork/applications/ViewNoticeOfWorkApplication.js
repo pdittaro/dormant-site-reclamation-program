@@ -6,17 +6,17 @@ import { Button } from "antd";
 import {
   fetchImportedNoticeOfWorkApplication,
   fetchOriginalNoticeOfWorkApplication,
-} from "@common/actionCreators/noticeOfWorkActionCreator";
-import { fetchMineRecordById } from "@common/actionCreators/mineActionCreator";
+} from "@/actionCreators/noticeOfWorkActionCreator";
+import { fetchMineRecordById } from "@/actionCreators/mineActionCreator";
 import {
   getNoticeOfWork,
   getOriginalNoticeOfWork,
   getNOWReclamationSummary,
-} from "@common/selectors/noticeOfWorkSelectors";
-import { getNoticeOfWorkApplicationStatusOptionsHash } from "@common/selectors/staticContentSelectors";
-import { getMines } from "@common/selectors/mineSelectors";
-import { getInspectorsHash } from "@common/selectors/partiesSelectors";
-import { downloadNowDocument } from "@common/utils/actionlessNetworkCalls";
+} from "@/selectors/noticeOfWorkSelectors";
+import { getNoticeOfWorkApplicationStatusOptionsHash } from "@/selectors/staticContentSelectors";
+import { getMines } from "@/selectors/mineSelectors";
+import { getInspectorsHash } from "@/selectors/partiesSelectors";
+import { downloadNowDocument } from "@/utils/actionlessNetworkCalls";
 import * as routes from "@/constants/routes";
 import CustomPropTypes from "@/customPropTypes";
 import ReviewNOWApplication from "@/components/noticeOfWork/applications/review/ReviewNOWApplication";

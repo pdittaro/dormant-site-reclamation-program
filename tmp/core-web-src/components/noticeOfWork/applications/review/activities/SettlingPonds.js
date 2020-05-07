@@ -3,7 +3,7 @@ import { PropTypes } from "prop-types";
 import { Field, formValueSelector } from "redux-form";
 import { connect } from "react-redux";
 import { Row, Col, Table, Button } from "antd";
-import { requiredRadioButton, maxLength, number } from "@common/utils/Validate";
+import { requiredRadioButton, maxLength, number } from "@/utils/validate";
 import * as FORM from "@/constants/forms";
 import { TRASHCAN } from "@/constants/assets";
 import RenderField from "@/components/common/RenderField";

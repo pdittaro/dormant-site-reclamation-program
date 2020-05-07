@@ -1,5 +1,5 @@
-import { orgbookReducer } from "@common/reducers/orgbookReducer";
-import { storeSearchOrgBookResults, storeOrgBookCredential } from "@common/actions/orgbookActions";
+import { orgbookReducer } from "@/reducers/orgbookReducer";
+import { storeSearchOrgBookResults, storeOrgBookCredential } from "@/actions/orgbookActions";
 import * as MOCK from "@/tests/mocks/dataMocks";
 
 const baseExpectedValue = {

@@ -3,8 +3,8 @@ import React from "react";
 import { Table } from "antd";
 import PropTypes from "prop-types";
 import moment from "moment";
-import { downloadFileFromDocumentManager } from "@common/utils/actionlessNetworkCalls";
-import { formatDateTime } from "@common/utils/helpers";
+import { downloadFileFromDocumentManager } from "@/utils/actionlessNetworkCalls";
+import { formatDateTime } from "@/utils/helpers";
 import CustomPropTypes from "@/customPropTypes";
 import LinkButton from "@/components/common/LinkButton";
 

@@ -13,8 +13,8 @@ import {
   number,
   lat,
   lon,
-} from "@common/utils/Validate";
-import { getCurrentMineTypes } from "@common/selectors/mineSelectors";
+} from "@/utils/validate";
+import { getCurrentMineTypes } from "@/selectors/mineSelectors";
 import {
   getConditionalDisturbanceOptionsHash,
   getConditionalCommodityOptions,
@@ -25,8 +25,8 @@ import {
   getMineTenureTypeDropdownOptions,
   getMineTenureTypesHash,
   getExemptionFeeSatusDropDownOptions,
-} from "@common/selectors/staticContentSelectors";
-import * as Strings from "@common/constants/strings";
+} from "@/selectors/staticContentSelectors";
+import * as Strings from "@/constants/strings";
 import * as FORM from "@/constants/forms";
 import * as Styles from "@/constants/styles";
 import CustomPropTypes from "@/customPropTypes";

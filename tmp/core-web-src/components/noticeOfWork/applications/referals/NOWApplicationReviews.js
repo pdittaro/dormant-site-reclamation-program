@@ -4,13 +4,13 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { Button, Row, Col, notification, Divider, Badge, Icon, Tag, Popconfirm } from "antd";
-import { formatDate } from "@common/utils/helpers";
+import { formatDate } from "@/utils/helpers";
 
-import { openModal, closeModal } from "@common/actions/modalActions";
+import { openModal, closeModal } from "@/actions/modalActions";
 import {
   getNowDocumentDownloadToken,
   getDocumentDownloadToken,
-} from "@common/utils/actionlessNetworkCalls";
+} from "@/utils/actionlessNetworkCalls";
 import { modalConfig } from "@/components/modalContent/config";
 import CustomPropTypes from "@/customPropTypes";
 import * as Permission from "@/constants/permissions";
@@ -25,9 +25,9 @@ import {
   setNoticeOfWorkApplicationDocumentDownloadState,
   updateNoticeOfWorkApplication,
   fetchImportedNoticeOfWorkApplication,
-} from "@common/actionCreators/noticeOfWorkActionCreator";
-import { getNoticeOfWorkReviews } from "@common/selectors/noticeOfWorkSelectors";
-import { getDropdownNoticeOfWorkApplicationReviewTypeOptions } from "@common/selectors/staticContentSelectors";
+} from "@/actionCreators/noticeOfWorkActionCreator";
+import { getNoticeOfWorkReviews } from "@/selectors/noticeOfWorkSelectors";
+import { getDropdownNoticeOfWorkApplicationReviewTypeOptions } from "@/selectors/staticContentSelectors";
 import NOWApplicationReviewsTable from "@/components/noticeOfWork/applications/referals/NOWApplicationReviewsTable";
 
 /**
@@ -501,7 +501,4 @@ const mapDispatchToProps = (dispatch) =>
 NOWApplicationReviews.propTypes = propTypes;
 NOWApplicationReviews.defaultProps = defaultProps;
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(NOWApplicationReviews);
+export default connect(mapStateToProps, mapDispatchToProps)(NOWApplicationReviews);

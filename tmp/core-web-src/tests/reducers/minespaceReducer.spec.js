@@ -1,8 +1,5 @@
-import { minespaceReducer } from "@common/reducers/minespaceReducer";
-import {
-  storeMinespaceUserList,
-  storeMinespaceUserMineList,
-} from "@common/actions/minespaceActions";
+import { minespaceReducer } from "@/reducers/minespaceReducer";
+import { storeMinespaceUserList, storeMinespaceUserMineList } from "@/actions/minespaceActions";
 
 const baseExpectedValue = {
   minespaceUsers: [],

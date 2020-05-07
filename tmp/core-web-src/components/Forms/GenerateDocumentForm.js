@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { reduxForm, focus } from "redux-form";
 import { Form, Button, Col, Row, Popconfirm } from "antd";
-import { resetForm } from "@common/utils/helpers";
+import { resetForm } from "@/utils/helpers";
 import * as FORM from "@/constants/forms";
 import { getGenerateDocumentFormField } from "@/components/common/GenerateDocumentFormField";
 

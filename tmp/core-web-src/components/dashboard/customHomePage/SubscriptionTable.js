@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { Popconfirm, Tooltip } from "antd";
 import { uniqBy, flattenDeep } from "lodash";
-import * as Strings from "@common/constants/strings";
+import * as Strings from "@/constants/strings";
 import * as router from "@/constants/routes";
 import NullScreen from "@/components/common/NullScreen";
 import CustomPropTypes from "@/customPropTypes";

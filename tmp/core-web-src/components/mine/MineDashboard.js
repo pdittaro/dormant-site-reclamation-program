@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { bindActionCreators } from "redux";
 import { Menu, Icon, Button, Dropdown, Popconfirm, Tooltip, Drawer } from "antd";
-import { fetchPermits } from "@common/actionCreators/permitActionCreator";
+import { fetchPermits } from "@/actionCreators/permitActionCreator";
 import {
   fetchMineRecordById,
   updateMineRecord,
@@ -14,18 +14,18 @@ import {
   subscribe,
   setMineVerifiedStatus,
   fetchMineVerifiedStatuses,
-} from "@common/actionCreators/mineActionCreator";
-import { fetchPartyRelationships } from "@common/actionCreators/partiesActionCreator";
-import { fetchVariancesByMine } from "@common/actionCreators/varianceActionCreator";
-import { fetchMineComplianceInfo } from "@common/actionCreators/complianceActionCreator";
-import { getUserInfo } from "@common/selectors/authenticationSelectors";
-import { getMines, getIsUserSubscribed } from "@common/selectors/mineSelectors";
-import { formatDate } from "@common/utils/helpers";
-import { storeVariances } from "@common/actions/varianceActions";
-import { storePermits } from "@common/actions/permitActions";
-import { storeMine } from "@common/actions/mineActions";
-import * as Strings from "@common/constants/strings";
-import { detectProdEnvironment } from "@common/utils/environmentUtils";
+} from "@/actionCreators/mineActionCreator";
+import { fetchPartyRelationships } from "@/actionCreators/partiesActionCreator";
+import { fetchVariancesByMine } from "@/actionCreators/varianceActionCreator";
+import { fetchMineComplianceInfo } from "@/actionCreators/complianceActionCreator";
+import { getUserInfo } from "@/selectors/authenticationSelectors";
+import { getMines, getIsUserSubscribed } from "@/selectors/mineSelectors";
+import { formatDate } from "@/utils/helpers";
+import { storeVariances } from "@/actions/varianceActions";
+import { storePermits } from "@/actions/permitActions";
+import { storeMine } from "@/actions/mineActions";
+import * as Strings from "@/constants/strings";
+import { detectProdEnvironment } from "@/utils/environmentUtils";
 import MineNavigation from "@/components/mine/MineNavigation";
 import Loading from "@/components/common/Loading";
 import CustomPropTypes from "@/customPropTypes";

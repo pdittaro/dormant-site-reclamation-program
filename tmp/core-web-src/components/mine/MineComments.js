@@ -3,12 +3,12 @@ import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 
-import { getMineComments } from "@common/selectors/mineSelectors";
+import { getMineComments } from "@/selectors/mineSelectors";
 import {
   deleteMineComment,
   createMineComment,
   fetchMineComments,
-} from "@common/actionCreators/mineActionCreator";
+} from "@/actionCreators/mineActionCreator";
 import CommentPanel from "@/components/common/comments/CommentPanel";
 import CustomPropTypes from "@/customPropTypes";
 

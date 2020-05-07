@@ -11,12 +11,12 @@ import {
   updateMineReport,
   createMineReport,
   deleteMineReport,
-} from "@common/actionCreators/reportActionCreator";
-import { changeModalTitle, openModal, closeModal } from "@common/actions/modalActions";
-import { getMineReports } from "@common/selectors/reportSelectors";
-import { getMineReportDefinitionOptions } from "@common/selectors/staticContentSelectors";
-import { getMines, getMineGuid } from "@common/selectors/mineSelectors";
-import * as Strings from "@common/constants/strings";
+} from "@/actionCreators/reportActionCreator";
+import { changeModalTitle, openModal, closeModal } from "@/actions/modalActions";
+import { getMineReports } from "@/selectors/reportSelectors";
+import { getMineReportDefinitionOptions } from "@/selectors/staticContentSelectors";
+import { getMines, getMineGuid } from "@/selectors/mineSelectors";
+import * as Strings from "@/constants/strings";
 import CustomPropTypes from "@/customPropTypes";
 import * as Permission from "@/constants/permissions";
 import AuthorizationWrapper from "@/components/common/wrappers/AuthorizationWrapper";

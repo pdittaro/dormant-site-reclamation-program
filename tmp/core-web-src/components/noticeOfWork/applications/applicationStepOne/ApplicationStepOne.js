@@ -7,8 +7,8 @@ import {
   createNoticeOfWorkApplication,
   fetchImportedNoticeOfWorkApplication,
   importNoticeOfWorkApplication,
-} from "@common/actionCreators/noticeOfWorkActionCreator";
-import { getDropdownInspectors } from "@common/selectors/partiesSelectors";
+} from "@/actionCreators/noticeOfWorkActionCreator";
+import { getDropdownInspectors } from "@/selectors/partiesSelectors";
 import AssignLeadInspector from "@/components/noticeOfWork/applications/applicationStepOne/AssignLeadInspector";
 import VerifyNOWMineInformation from "@/components/noticeOfWork/applications/applicationStepOne/verification/VerifyNOWMineInformation";
 import CustomPropTypes from "@/customPropTypes";

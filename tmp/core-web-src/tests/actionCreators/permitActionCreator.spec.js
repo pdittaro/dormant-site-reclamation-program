@@ -7,10 +7,10 @@ import {
   createPermitAmendment,
   updatePermitAmendment,
   removePermitAmendmentDocument,
-} from "@common/actionCreators/permitActionCreator";
-import * as genericActions from "@common/actions/genericActions";
-import { ENVIRONMENT } from "@common/constants/environment";
-import * as API from "@common/constants/API";
+} from "@/actionCreators/permitActionCreator";
+import * as genericActions from "@/actions/genericActions";
+import { ENVIRONMENT } from "@/constants/environment";
+import * as API from "@/constants/api";
 import * as MOCK from "@/tests/mocks/dataMocks";
 
 const dispatch = jest.fn();
@@ -36,7 +36,10 @@ describe("`createPermit` action creator", () => {
   it("Request successful, dispatches `success` with correct response", () => {
     const mockResponse = { data: { success: true } };
     mockAxios.onPost(url, mockPayload).reply(200, mockResponse);
-    return createPermit(mine_guid, mockPayload)(dispatch).then(() => {
+    return createPermit(
+      mine_guid,
+      mockPayload
+    )(dispatch).then(() => {
       expect(requestSpy).toHaveBeenCalledTimes(1);
       expect(successSpy).toHaveBeenCalledTimes(1);
       expect(dispatch).toHaveBeenCalledTimes(4);
@@ -88,7 +91,11 @@ describe("`updatePermit` action creator", () => {
   it("Request successful, dispatches `success` with correct response", () => {
     const mockResponse = { data: { success: true } };
     mockAxios.onPut(url, mockPayload).reply(200, mockResponse);
-    return updatePermit(mine_guid, permit_guid, mockPayload)(dispatch).then(() => {
+    return updatePermit(
+      mine_guid,
+      permit_guid,
+      mockPayload
+    )(dispatch).then(() => {
       expect(requestSpy).toHaveBeenCalledTimes(1);
       expect(successSpy).toHaveBeenCalledTimes(1);
       expect(dispatch).toHaveBeenCalledTimes(4);
@@ -97,7 +104,11 @@ describe("`updatePermit` action creator", () => {
 
   it("Request failure, dispatches `error` with correct response", () => {
     mockAxios.onPut(url).reply(418, MOCK.ERROR);
-    return updatePermit(mine_guid, permit_guid, mockPayload)(dispatch).then(() => {
+    return updatePermit(
+      mine_guid,
+      permit_guid,
+      mockPayload
+    )(dispatch).then(() => {
       expect(requestSpy).toHaveBeenCalledTimes(1);
       expect(errorSpy).toHaveBeenCalledTimes(1);
       expect(dispatch).toHaveBeenCalledTimes(4);
@@ -115,7 +126,11 @@ describe("`createPermitAmendment` action creator", () => {
   it("Request successful, dispatches `success` with correct response", () => {
     const mockResponse = { data: { success: true } };
     mockAxios.onPost(url, mockPayload).reply(200, mockResponse);
-    return createPermitAmendment(mine_guid, permit_guid, mockPayload)(dispatch).then(() => {
+    return createPermitAmendment(
+      mine_guid,
+      permit_guid,
+      mockPayload
+    )(dispatch).then(() => {
       expect(requestSpy).toHaveBeenCalledTimes(1);
       expect(successSpy).toHaveBeenCalledTimes(1);
       expect(dispatch).toHaveBeenCalledTimes(4);
@@ -124,7 +139,11 @@ describe("`createPermitAmendment` action creator", () => {
 
   it("Request failure, dispatches `error` with correct response", () => {
     mockAxios.onPost(url).reply(418, MOCK.ERROR);
-    return createPermitAmendment(mine_guid, permit_guid, mockPayload)(dispatch).then(() => {
+    return createPermitAmendment(
+      mine_guid,
+      permit_guid,
+      mockPayload
+    )(dispatch).then(() => {
       expect(requestSpy).toHaveBeenCalledTimes(1);
       expect(errorSpy).toHaveBeenCalledTimes(1);
       expect(dispatch).toHaveBeenCalledTimes(4);
@@ -148,9 +167,12 @@ describe("`updatePermitAmendment` action creator", () => {
   it("Request successful, dispatches `success` with correct response", () => {
     const mockResponse = { data: { success: true } };
     mockAxios.onPut(url, mockPayload).reply(200, mockResponse);
-    return updatePermitAmendment(mineGuid, permitGuid, permitAmdendmentGuid, mockPayload)(
-      dispatch
-    ).then(() => {
+    return updatePermitAmendment(
+      mineGuid,
+      permitGuid,
+      permitAmdendmentGuid,
+      mockPayload
+    )(dispatch).then(() => {
       expect(requestSpy).toHaveBeenCalledTimes(1);
       expect(successSpy).toHaveBeenCalledTimes(1);
       expect(dispatch).toHaveBeenCalledTimes(4);
@@ -159,9 +181,12 @@ describe("`updatePermitAmendment` action creator", () => {
 
   it("Request failure, dispatches `error` with correct response", () => {
     mockAxios.onPut(url).reply(418, MOCK.ERROR);
-    return updatePermitAmendment(mineGuid, permitGuid, permitAmdendmentGuid, mockPayload)(
-      dispatch
-    ).then(() => {
+    return updatePermitAmendment(
+      mineGuid,
+      permitGuid,
+      permitAmdendmentGuid,
+      mockPayload
+    )(dispatch).then(() => {
       expect(requestSpy).toHaveBeenCalledTimes(1);
       expect(errorSpy).toHaveBeenCalledTimes(1);
       expect(dispatch).toHaveBeenCalledTimes(4);
@@ -184,9 +209,12 @@ describe("`removePermitAmendmentDocument` action creator", () => {
   it("Request successful, dispatches `success` with correct response", () => {
     const mockResponse = { data: { success: true } };
     mockAxios.onDelete(url).reply(200, mockResponse);
-    return removePermitAmendmentDocument(mineGuid, permitGuid, permitAmdendmentGuid, documentGuid)(
-      dispatch
-    ).then(() => {
+    return removePermitAmendmentDocument(
+      mineGuid,
+      permitGuid,
+      permitAmdendmentGuid,
+      documentGuid
+    )(dispatch).then(() => {
       expect(requestSpy).toHaveBeenCalledTimes(1);
       expect(successSpy).toHaveBeenCalledTimes(1);
       expect(dispatch).toHaveBeenCalledTimes(4);
@@ -195,9 +223,12 @@ describe("`removePermitAmendmentDocument` action creator", () => {
 
   it("Request failure, dispatches `error` with correct response", () => {
     mockAxios.onDelete(url).reply(418, MOCK.ERROR);
-    return removePermitAmendmentDocument(mineGuid, permitGuid, permitAmdendmentGuid, documentGuid)(
-      dispatch
-    ).then(() => {
+    return removePermitAmendmentDocument(
+      mineGuid,
+      permitGuid,
+      permitAmdendmentGuid,
+      documentGuid
+    )(dispatch).then(() => {
       expect(requestSpy).toHaveBeenCalledTimes(1);
       expect(errorSpy).toHaveBeenCalledTimes(1);
       expect(dispatch).toHaveBeenCalledTimes(4);

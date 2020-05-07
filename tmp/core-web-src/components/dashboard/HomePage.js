@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Row, Col } from "antd";
 import PropTypes from "prop-types";
-import { fetchMetabaseDashboard } from "@common/actionCreators/reportingActionCreator";
+import { fetchMetabaseDashboard } from "@/actionCreators/reportingActionCreator";
 import ReactIframeResizer from "react-iframe-resizer-super";
 import SearchBar from "@/components/search/SearchBar";
 import { BACKGROUND, HSRC_PDF } from "@/constants/assets";

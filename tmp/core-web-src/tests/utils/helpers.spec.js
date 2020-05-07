@@ -1,4 +1,4 @@
-import { compareCodes } from "@common/utils/helpers";
+import { compareCodes } from "@/utils/helpers";
 
 describe("helpers class", () => {
   describe("`compareCodes` function", () => {

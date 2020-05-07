@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Button, Col, Row, Popconfirm } from "antd";
 import { connect } from "react-redux";
 import { getFormValues } from "redux-form";
-import { getDropdownNoticeOfWorkApplicationStatusOptions } from "@common/selectors/staticContentSelectors";
+import { getDropdownNoticeOfWorkApplicationStatusOptions } from "@/selectors/staticContentSelectors";
 import * as FORM from "@/constants/forms";
 import UpdateNOWStatusForm from "@/components/Forms/noticeOfWork/UpdateNOWStatusForm";
 import CustomPropTypes from "@/customPropTypes";

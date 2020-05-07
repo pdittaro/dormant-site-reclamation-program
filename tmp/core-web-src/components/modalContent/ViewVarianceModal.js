@@ -2,13 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { Button } from "antd";
-import { getInspectorsHash } from "@common/selectors/partiesSelectors";
+import { getInspectorsHash } from "@/selectors/partiesSelectors";
 import {
   getVarianceStatusOptionsHash,
   getHSRCMComplianceCodesHash,
   getVarianceDocumentCategoryOptionsHash,
-} from "@common/selectors/staticContentSelectors";
-import * as Strings from "@common/constants/strings";
+} from "@/selectors/staticContentSelectors";
+import * as Strings from "@/constants/strings";
 import CustomPropTypes from "@/customPropTypes";
 import { VarianceDetails } from "../mine/Variances/VarianceDetails";
 

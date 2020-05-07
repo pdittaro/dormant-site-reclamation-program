@@ -1,10 +1,10 @@
-import { searchReducer } from "@common/reducers/searchReducer";
+import { searchReducer } from "@/reducers/searchReducer";
 import {
   storeSearchOptions,
   storeSearchResults,
   storeSearchBarResults,
   clearSearchBarResults,
-} from "@common/actions/searchActions";
+} from "@/actions/searchActions";
 
 const baseExpectedValue = {
   searchOptions: [],

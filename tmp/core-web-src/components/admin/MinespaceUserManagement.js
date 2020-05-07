@@ -3,15 +3,15 @@ import { flatMap, uniq } from "lodash";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import { getMineNames } from "@common/selectors/mineSelectors";
-import { getMinespaceUsers, getMinespaceUserEmailHash } from "@common/selectors/minespaceSelector";
-import { fetchMineNameList } from "@common/actionCreators/mineActionCreator";
+import { getMineNames } from "@/selectors/mineSelectors";
+import { getMinespaceUsers, getMinespaceUserEmailHash } from "@/selectors/minespaceSelector";
+import { fetchMineNameList } from "@/actionCreators/mineActionCreator";
 import {
   fetchMinespaceUsers,
   deleteMinespaceUser,
   fetchMinespaceUserMines,
-} from "@common/actionCreators/minespaceActionCreator";
-import { getMinespaceUserMines } from "@common/reducers/minespaceReducer";
+} from "@/actionCreators/minespaceActionCreator";
+import { getMinespaceUserMines } from "@/reducers/minespaceReducer";
 import CustomPropTypes from "@/customPropTypes";
 import NewMinespaceUser from "@/components/admin/NewMinespaceUser";
 import MinespaceUserList from "@/components/admin/MinespaceUserList";
@@ -100,7 +100,4 @@ const mapDispatchToProps = (dispatch) =>
 MinespaceUserManagement.propTypes = propTypes;
 MinespaceUserManagement.defaultProps = defaultProps;
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(MinespaceUserManagement);
+export default connect(mapStateToProps, mapDispatchToProps)(MinespaceUserManagement);

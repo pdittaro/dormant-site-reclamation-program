@@ -7,8 +7,8 @@ import "filepond/dist/filepond.min.css";
 import FilePondPluginFileValidateSize from "filepond-plugin-file-validate-size";
 import FilePondPluginFileValidateType from "filepond-plugin-file-validate-type";
 import tus from "tus-js-client";
-import { ENVIRONMENT } from "@common/constants/environment";
-import { createRequestHeader } from "@/utils/RequestHeaders";
+import { ENVIRONMENT } from "@/constants/environment";
+import { createRequestHeader } from "@/utils/requestHeaders";
 
 registerPlugin(FilePondPluginFileValidateSize, FilePondPluginFileValidateType);
 
@@ -26,8 +26,8 @@ const defaultProps = {
   maxFileSize: "750MB",
   acceptedFileTypesMap: {},
   allowRevert: false,
-  onFileLoad: () => { },
-  onRemoveFile: () => { },
+  onFileLoad: () => {},
+  onRemoveFile: () => {},
   chunkSize: 1048576, // 1MB
 };
 

@@ -4,14 +4,14 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { Divider } from "antd";
 import moment from "moment";
-import { openModal, closeModal } from "@common/actions/modalActions";
+import { openModal, closeModal } from "@/actions/modalActions";
 import {
   createVariance,
   fetchVariancesByMine,
   addDocumentToVariance,
   updateVariance,
-} from "@common/actionCreators/varianceActionCreator";
-import { getMines, getMineGuid } from "@common/selectors/mineSelectors";
+} from "@/actionCreators/varianceActionCreator";
+import { getMines, getMineGuid } from "@/selectors/mineSelectors";
 import {
   getDropdownHSRCMComplianceCodes,
   getHSRCMComplianceCodesHash,
@@ -19,10 +19,10 @@ import {
   getVarianceStatusOptionsHash,
   getDropdownVarianceDocumentCategoryOptions,
   getVarianceDocumentCategoryOptionsHash,
-} from "@common/selectors/staticContentSelectors";
-import { getVarianceApplications, getApprovedVariances } from "@common/selectors/varianceSelectors";
-import { getDropdownInspectors, getInspectorsHash } from "@common/selectors/partiesSelectors";
-import * as Strings from "@common/constants/strings";
+} from "@/selectors/staticContentSelectors";
+import { getVarianceApplications, getApprovedVariances } from "@/selectors/varianceSelectors";
+import { getDropdownInspectors, getInspectorsHash } from "@/selectors/partiesSelectors";
+import * as Strings from "@/constants/strings";
 import MineVarianceTable from "./MineVarianceTable";
 import * as ModalContent from "@/constants/modalContent";
 import { modalConfig } from "@/components/modalContent/config";

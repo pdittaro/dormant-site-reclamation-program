@@ -1,4 +1,4 @@
-import { ENVIRONMENT } from "@common/constants/environment";
+import { ENVIRONMENT } from "../constants/environment";
 
 /**
  * detect IE
@@ -33,12 +33,10 @@ export const detectIE = () => {
     const rv = userAgent.indexOf("rv:");
     return parseInt(userAgent.substring(rv + 3, userAgent.indexOf(".", rv)), 10);
   }
-
   // other browser
   return false;
 };
 
 export const detectTestEnvironment = () => ENVIRONMENT.environment === "test";
 export const detectProdEnvironment = () => ENVIRONMENT.environment === "production";
-export const detectDevelopmentEnvironment = () =>
-  ENVIRONMENT.environment !== "test" && ENVIRONMENT.environment !== "production";
+export const detectDevelopmentEnvironment = () => ENVIRONMENT.environment === "development";

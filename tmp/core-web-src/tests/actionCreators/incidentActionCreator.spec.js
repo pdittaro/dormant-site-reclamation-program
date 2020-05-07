@@ -5,10 +5,10 @@ import {
   updateMineIncident,
   fetchMineIncidents,
   fetchIncidents,
-} from "@common/actionCreators/incidentActionCreator";
-import * as genericActions from "@common/actions/genericActions";
-import { ENVIRONMENT } from "@common/constants/environment";
-import * as API from "@common/constants/API";
+} from "@/actionCreators/incidentActionCreator";
+import * as genericActions from "@/actions/genericActions";
+import { ENVIRONMENT } from "@/constants/environment";
+import * as API from "@/constants/api";
 import * as MOCK from "@/tests/mocks/dataMocks";
 
 const dispatch = jest.fn();
@@ -35,7 +35,10 @@ describe("`createMineIncident` action creator", () => {
   it("Request successful, dispatches `success` with correct response", () => {
     const mockResponse = { data: { success: true } };
     mockAxios.onPost(url, mockPayload).reply(200, mockResponse);
-    return createMineIncident(mineGuid, mockPayload)(dispatch).then(() => {
+    return createMineIncident(
+      mineGuid,
+      mockPayload
+    )(dispatch).then(() => {
       expect(requestSpy).toHaveBeenCalledTimes(1);
       expect(successSpy).toHaveBeenCalledTimes(1);
       expect(dispatch).toHaveBeenCalledTimes(2);
@@ -87,7 +90,11 @@ describe("`updateMineIncident` action creator", () => {
   it("Request successful, dispatches `success` with correct response", () => {
     const mockResponse = { data: { success: true } };
     mockAxios.onPut(url, mockPayload).reply(200, mockResponse);
-    return updateMineIncident(mineGuid, mineIncidentGUID, mockPayload)(dispatch).then(() => {
+    return updateMineIncident(
+      mineGuid,
+      mineIncidentGUID,
+      mockPayload
+    )(dispatch).then(() => {
       expect(requestSpy).toHaveBeenCalledTimes(1);
       expect(successSpy).toHaveBeenCalledTimes(1);
       expect(dispatch).toHaveBeenCalledTimes(2);
@@ -96,7 +103,11 @@ describe("`updateMineIncident` action creator", () => {
 
   it("Request failure, dispatches `error` with correct response", () => {
     mockAxios.onPut(url).reply(418, MOCK.ERROR);
-    return updateMineIncident(mineGuid, mineIncidentGUID, mockPayload)(dispatch).then(() => {
+    return updateMineIncident(
+      mineGuid,
+      mineIncidentGUID,
+      mockPayload
+    )(dispatch).then(() => {
       expect(requestSpy).toHaveBeenCalledTimes(1);
       expect(errorSpy).toHaveBeenCalledTimes(1);
       expect(dispatch).toHaveBeenCalledTimes(2);

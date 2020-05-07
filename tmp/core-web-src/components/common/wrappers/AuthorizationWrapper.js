@@ -1,11 +1,8 @@
 import { PropTypes } from "prop-types";
 import { connect } from "react-redux";
-import { getUserAccessData } from "@common/selectors/authenticationSelectors";
-import { USER_ROLES } from "@common/constants/environment";
-import {
-  detectDevelopmentEnvironment,
-  detectProdEnvironment,
-} from "@common/utils/environmentUtils";
+import { getUserAccessData } from "@/selectors/authenticationSelectors";
+import { USER_ROLES } from "@/constants/environment";
+import { detectDevelopmentEnvironment, detectProdEnvironment } from "@/utils/environmentUtils";
 import * as Permission from "@/constants/permissions";
 
 /**

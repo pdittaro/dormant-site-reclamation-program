@@ -1,8 +1,8 @@
 import React from "react";
 import { Menu, Dropdown, Button, Icon, Tooltip, Table, Popconfirm } from "antd";
 import PropTypes from "prop-types";
-import * as Strings from "@common/constants/strings";
-import { formatDate, dateSorter, formatMoney } from "@common/utils/helpers";
+import * as Strings from "@/constants/strings";
+import { formatDate, dateSorter, formatMoney } from "@/utils/helpers";
 import NullScreen from "@/components/common/NullScreen";
 import AuthorizationWrapper from "@/components/common/wrappers/AuthorizationWrapper";
 import * as Permission from "@/constants/permissions";

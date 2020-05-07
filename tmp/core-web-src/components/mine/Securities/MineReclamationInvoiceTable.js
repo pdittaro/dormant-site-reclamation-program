@@ -1,9 +1,9 @@
 import React from "react";
 import { Button, Icon, Tooltip, Table } from "antd";
 import PropTypes from "prop-types";
-import * as Strings from "@common/constants/strings";
-import { formatMoney, truncateFilename } from "@common/utils/helpers";
-import { downloadFileFromDocumentManager } from "@common/utils/actionlessNetworkCalls";
+import * as Strings from "@/constants/strings";
+import { formatMoney, truncateFilename } from "@/utils/helpers";
+import { downloadFileFromDocumentManager } from "@/utils/actionlessNetworkCalls";
 import NullScreen from "@/components/common/NullScreen";
 import AuthorizationWrapper from "@/components/common/wrappers/AuthorizationWrapper";
 import * as Permission from "@/constants/permissions";

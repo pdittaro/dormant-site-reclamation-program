@@ -1,11 +1,11 @@
 import { notification } from "antd";
 import { showLoading, hideLoading } from "react-redux-loading-bar";
-import { error, request, success } from "@common/actions/genericActions";
-import { ENVIRONMENT } from "@common/constants/environment";
-import { createRequestHeader } from "@common/utils/RequestHeaders";
-import CustomAxios from "@common/customAxios";
-import * as COMMON_API from "@common/constants/API";
-import * as API from "@/constants/API";
+import { error, request, success } from "@/actions/genericActions";
+import { ENVIRONMENT } from "@/constants/environment";
+import { createRequestHeader } from "@/utils/requestHeaders";
+import CustomAxios from "@/customAxios";
+import * as COMMON_API from "@/constants/api";
+import * as API from "@/constants/api";
 import * as reducerTypes from "@/constants/reducerTypes";
 import * as documentActions from "@/actions/documentActions";
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import { getParties } from "@common/selectors/partiesSelectors";
+import { getParties } from "@/selectors/partiesSelectors";
 import CustomPropTypes from "@/customPropTypes";
 import EditFullPartyForm from "@/components/Forms/parties/EditFullPartyForm";
 

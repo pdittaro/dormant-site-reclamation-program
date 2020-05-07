@@ -10,17 +10,17 @@ import {
   fetchPartyRelationships,
   updateParty,
   deleteParty,
-} from "@common/actionCreators/partiesActionCreator";
-import { fetchMineBasicInfoList } from "@common/actionCreators/mineActionCreator";
-import { openModal, closeModal } from "@common/actions/modalActions";
-import { getParties, getPartyRelationships } from "@common/selectors/partiesSelectors";
-import { getMineBasicInfoListHash } from "@common/selectors/mineSelectors";
+} from "@/actionCreators/partiesActionCreator";
+import { fetchMineBasicInfoList } from "@/actionCreators/mineActionCreator";
+import { openModal, closeModal } from "@/actions/modalActions";
+import { getParties, getPartyRelationships } from "@/selectors/partiesSelectors";
+import { getMineBasicInfoListHash } from "@/selectors/mineSelectors";
 import {
   getDropdownProvinceOptions,
   getPartyRelationshipTypeHash,
-} from "@common/selectors/staticContentSelectors";
-import { formatTitleString, formatDate } from "@common/utils/helpers";
-import * as Strings from "@common/constants/strings";
+} from "@/selectors/staticContentSelectors";
+import { formatTitleString, formatDate } from "@/utils/helpers";
+import * as Strings from "@/constants/strings";
 import { EDIT } from "@/constants/assets";
 import { modalConfig } from "@/components/modalContent/config";
 import Loading from "@/components/common/Loading";

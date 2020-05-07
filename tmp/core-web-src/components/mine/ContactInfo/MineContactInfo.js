@@ -4,10 +4,10 @@ import { Divider } from "antd";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { debounce } from "lodash";
-import { openModal, closeModal } from "@common/actions/modalActions";
-import { createParty, fetchParties } from "@common/actionCreators/partiesActionCreator";
-import { fetchMineRecordById } from "@common/actionCreators/mineActionCreator";
-import { getMines, getMineGuid } from "@common/selectors/mineSelectors";
+import { openModal, closeModal } from "@/actions/modalActions";
+import { createParty, fetchParties } from "@/actionCreators/partiesActionCreator";
+import { fetchMineRecordById } from "@/actionCreators/mineActionCreator";
+import { getMines, getMineGuid } from "@/selectors/mineSelectors";
 import ViewPartyRelationships from "./ViewPartyRelationships";
 import CustomPropTypes from "@/customPropTypes";
 
@@ -75,7 +75,4 @@ const mapDispatchToProps = (dispatch) =>
     dispatch
   );
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(MineContactInfo);
+export default connect(mapStateToProps, mapDispatchToProps)(MineContactInfo);

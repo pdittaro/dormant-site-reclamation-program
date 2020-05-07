@@ -10,9 +10,9 @@ exports[`NullScreen renders properly 1`] = `
         <Paragraph>
           You may have to log in. Otherwise, please contact 
           <a
-            href="mds@gov.bc.ca"
+            href="ducklord@duckz.com"
           >
-            mds@gov.bc.ca
+            ducklord@duckz.com
           </a>
            for assistance.
         </Paragraph>

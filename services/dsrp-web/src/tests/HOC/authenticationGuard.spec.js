@@ -1,6 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
-import { AuthenticationGuard } from "@/HOC/AuthenticationGuard";
+import { AuthenticationGuard } from "@/hoc/AuthenticationGuard";
 import UnauthenticatedNotice from "@/components/common/UnauthenticatedNotice";
 import Loading from "@/components/common/Loading";
 
