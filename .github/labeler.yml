@@ -1,8 +1,0 @@
-💾 Backend:
-  - services/dsrp-api/**/*
-
-💻 Frontend:
-  - services/dsrp-web/**/*
-
-🏭 CI/CD:
-  - openshift/**/*
