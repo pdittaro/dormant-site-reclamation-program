@@ -29,26 +29,24 @@ ifeq ($(KC_HOST_ENTRY),)
 	@echo "++ Adding required keycloak entry to hosts file:"
 	@echo "127.0.0.1       localhost       keycloak" | sudo tee -a /etc/hosts;
 endif
-	@[ ! -f ./services/core-web/.env ] || cp ./services/core-web/.env ./services/core-web/.env-last-backup
-	@cp ./services/core-web/.env-dev-local-keycloak ./services/core-web/.env
-	@[ ! -f "./services/core-web/src/constants/environment.js" ] || cp ./services/core-web/src/constants/environment.js ./services/core-web/src/constants/environment.js-last-backup
-	@cp ./services/core-web/src/constants/environment.js-dev-local-keycloak ./services/core-web/src/constants/environment.js
-	@[ ! -f "./services/core-api/.env" ] || cp ./services/core-api/.env ./services/core-api/.env-last-backup
-	@cp ./services/core-api/.env-dev-local-keycloak ./services/core-api/.env
+	@[ ! -f ./services/dsrp-web/.env ] || cp ./services/dsrp-web/.env ./services/dsrp-web/.env-last-backup
+	@cp ./services/dsrp-web/.env-dev-local-keycloak ./services/dsrp-web/.env
+	@[ ! -f "./services/dsrp-web/src/constants/environment.js" ] || cp ./services/dsrp-web/src/constants/environment.js ./services/dsrp-web/src/constants/environment.js-last-backup
+	@cp ./services/dsrp-web/src/constants/environment.js-dev-local-keycloak ./services/dsrp-web/src/constants/environment.js
+	@[ ! -f "./services/dsrp-api/.env" ] || cp ./services/dsrp-api/.env ./services/dsrp-api/.env-last-backup
+	@cp ./services/dsrp-api/.env-dev-local-keycloak ./services/dsrp-api/.env
 	@[ ! -f "./services/nris-api/backend/.env" ] || cp ./services/nris-api/backend/.env ./services/nris-api/backend/.env-last-backup
 	@cp ./services/nris-api/backend/.env-dev-local-keycloak ./services/nris-api/backend/.env
 	@[ ! -f "./services/document-manager/backend/.env" ] || cp ./services/document-manager/backend/.env ./services/document-manager/backend/.env-last-backup
 	@cp ./services/document-manager/backend/.env-dev-local-keycloak ./services/document-manager/backend/.env
 else
 	@if "$(KC_HOST_ENTRY)" GTR "" (echo "hosts entry already exists") else (echo 127.0.0.1        localhost       keycloak >> C:\Windows\System32\drivers\etc\hosts)
-	@if exist .\services\core-web\.env copy /Y .\services\core-web\.env .\services\core-web\.env-last-backup
-	@copy /Y .\services\core-web\.env-dev-local-keycloak .\services\core-web\.env
-	@if exist .\services\core-web\src\constants\environment.js copy /Y .\services\core-web\src\constants\environment.js .\services\core-web\src\constants\environment.js-last-backup
-	@copy /Y .\services\core-web\src\constants\environment.js-dev-local-keycloak .\services\core-web\src\constants\environment.js
-	@if exist .\services\core-api\.env copy .\services\core-api\.env .\services\core-api\.env-last-backup
-	@copy /Y .\services\core-api\.env-dev-local-keycloak .\services\core-api\.env
-	@if exist .\services\nris-api/backend\.env copy .\services\nris-api\backend\.env .\services\nris-api\backend\.env-last-backup
-	@copy /Y .\services\nris-api\backend\.env-dev-local-keycloak .\services\nris-api\backend\.env
+	@if exist .\services\dsrp-web\.env copy /Y .\services\dsrp-web\.env .\services\dsrp-web\.env-last-backup
+	@copy /Y .\services\dsrp-web\.env-dev-local-keycloak .\services\dsrp-web\.env
+	@if exist .\services\dsrp-web\src\constants\environment.js copy /Y .\services\dsrp-web\src\constants\environment.js .\services\dsrp-web\src\constants\environment.js-last-backup
+	@copy /Y .\services\dsrp-web\src\constants\environment.js-dev-local-keycloak .\services\dsrp-web\src\constants\environment.js
+	@if exist .\services\dsrp-api\.env copy .\services\dsrp-api\.env .\services\dsrp-api\.env-last-backup
+	@copy /Y .\services\dsrp-api\.env-dev-local-keycloak .\services\dsrp-api\.env
 	@if exist .\services\document-manager\backend\.env copy .\services\document-manager\backend\.env .\services\document-manager\backend\.env-last-backup
 	@copy /Y .\services\document-manager\backend\.env-dev-local-keycloak .\services\document-manager\backend\.env
 endif
@@ -56,9 +54,9 @@ endif
 
 restore-last-env:
 	@echo "+\n++ Restoring your environment from last backup...\n+"
-	@cp ./services/core-web/.env-last-backup ./services/core-web/.env
-	@cp ./services/core-web/src/constants/environment.js ./services/core-web/src/constants/environment.js-last-backup
-	@cp ./services/core-api/.env-last-backup ./services/core-api/.env
+	@cp ./services/dsrp-web/.env-last-backup ./services/dsrp-web/.env
+	@cp ./services/dsrp-web/src/constants/environment.js ./services/dsrp-web/src/constants/environment.js-last-backup
+	@cp ./services/dsrp-api/.env-last-backup ./services/dsrp-api/.env
 	@cp ./services/nris-api/backend/.env-last-backup ./services/nris-api/backend/.env
 	@cp ./services/document-manager/backend/.env-last-backup ./services/document-manager/backend/.env
 
@@ -72,13 +70,13 @@ endif
 
 create-local-keycloak-users:
 	@echo "+\n++ Creating admin user... (admin/admin)\n+"
-	@docker exec -it mds_keycloak /tmp/keycloak-local-user.sh
+	@docker exec -it dsrp_keycloak /tmp/keycloak-local-user.sh
 
 rebuild-all-local-friendly-message:
-	@echo "+\n++ mds_frontend will be available at http://localhost:3000"
-	@echo "++ mds_backend will be available at http://localhost:5000"
-	@echo "++ mds_postgres will be available at http://localhost:5432"
-	@echo "++ mds_keycloak will be available at http://keycloak:8080\n+"
+	@echo "+\n++ dsrp_frontend will be available at http://localhost:3000"
+	@echo "++ dsrp_backend will be available at http://localhost:5000"
+	@echo "++ dsrp_postgres will be available at http://localhost:5432"
+	@echo "++ dsrp_keycloak will be available at http://keycloak:8080\n+"
 
 project-build:
 	@echo "+\n++ Performing project build ...\n+"
@@ -98,7 +96,7 @@ backend-run:
 
 backend-entry:
 	@echo "+\n++ Entering backend container ...\n+"
-	@docker exec -it mds_backend bash
+	@docker exec -it dsrp_backend bash
 
 cache:
 	@echo "+\n++ Running redis...\n+"
@@ -112,12 +110,6 @@ database-run:
 	@echo "+\n++ Running postgres and Flyway migrations...\n+"
 	@docker-compose up -d postgres flyway
 
-webpack-frontend:
-	@echo "+\n++ Removing frontend docker container and building local dev version ...\n+"
-	@docker-compose rm -f -v -s frontend
-	@rm -rf ./services/core-web/node_modules/
-	@cd ./services/core-web/; npm i; npm run serve; cd ..
-
 frontend-build:
 	@echo "+\n++ Performing frontend build ...\n+"
 	@docker-compose build frontend
@@ -126,46 +118,13 @@ frontend-run:
 	@echo "+\n++ Running frontend...\n+"
 	@docker-compose up -d frontend
 
-database-dump:
-	@echo "+\n++ Getting database dump from test environment...\n+"
-	@sh ./bin/database-dump.sh empr-mds-test pgDump-test
-
-database-dump-seed:
-	@echo "+\n++ Seeding docker database...\n+"
-	@docker cp pgDump-test.pgCustom mds_postgres:/tmp/
-	@docker exec -it mds_postgres pg_restore -U mds -d mds -c /tmp/pgDump-test.pgCustom
-
-database-dump-seed-local:
-	@echo "+\n++ Seeding locally installed database...\n+"
-	@pg_restore -U mds -d mds -c pgDump-test.pgCustom
-
-generate-rand1000:
-	@echo "+\n++ Generating 1000 random mine records in local database container...\n+"
-	@docker exec -it mds_backend bash -c "flask create-data 1000;"
-
-generate-rand100:
-	@echo "+\n++ Generating 100 random mine records in local database container...\n+"
-	@docker exec -it mds_backend bash -c "flask create-data 100;"
-
-database-dump-clean:
-	@echo "+\n++ Removing dump file...\n+"
-	@rm -f pgDump-test.pgCustom
-
 keycloak:
 	@echo "+\n++ Running keycloak...\n+"
 	@docker-compose up --force-recreate -d keycloak
 
 keycloak-user:
 	@echo "+\n++ Creating local admin user...\n+"
-	@docker exec -it mds_keycloak /tmp/keycloak-local-user.sh
-
-test:
-	@echo "+\n++ Running functional test...\n+"
-	@cd functional-tests && ./gradlew chromeTest -DchromeTest.single=CustomJUnitSpecRunner
-
-test-headless:
-	@echo "+\n++ Running functional test...\n+"
-	@cd functional-tests && ./gradlew chromeHeadlessTest -DchromeHeadlessTest.single=CustomJUnitSpecRunner
+	@docker exec -it dsrp_keycloak /tmp/keycloak-local-user.sh
 
 stop:
 	@echo "+\n++ Stopping backend and postgres...\n+"
@@ -174,9 +133,9 @@ stop:
 clean:
 	@echo "+\n++ Cleaning ...\n+"
 	@docker-compose rm -f -v -s
-	@docker rmi -f mds_postgres mds_backend mds_frontend mds_flyway
-	@docker volume rm mds_postgres-data -f
+	@docker rmi -f dsrp_postgres dsrp_backend dsrp_frontend dsrp_flyway
+	@docker volume rm dsrp_postgres-data -f
 
 clean-db: stop |
-	@docker rmi -f mds_flyway
-	@docker volume rm mds_postgres-data -f
+	@docker rmi -f dsrp_flyway
+	@docker volume rm dsrp_postgres-data -f
