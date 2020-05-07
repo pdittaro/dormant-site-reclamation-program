@@ -9,7 +9,11 @@ exports[`NullScreen renders properly 1`] = `
       extra={
         <Paragraph>
           You may have to log in. Otherwise, please contact 
-          <a />
+          <a
+            href="ducklord@duckz.com"
+          >
+            ducklord@duckz.com
+          </a>
            for assistance.
         </Paragraph>
       }

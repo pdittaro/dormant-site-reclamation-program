@@ -24,7 +24,7 @@ export const LandingPage = (props) => (
       <Col xl={{ span: 24 }} xxl={{ span: 20 }}>
         <Title>Welcome to Dormant Site Reclamation Project</Title>
         <Paragraph className="header-text">
-          Manage applications, see inspection histories, submit reports, and more.
+          Manage applications, see inspection histories, get ducks, and more.
         </Paragraph>
         {!props.isAuthenticated && (
           <Button type="primary" size="large" className="login">

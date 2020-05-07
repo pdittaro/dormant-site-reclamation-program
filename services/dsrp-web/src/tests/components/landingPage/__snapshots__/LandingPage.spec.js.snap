@@ -34,7 +34,7 @@ exports[`LandingPage renders properly 1`] = `
       <Paragraph
         className="header-text"
       >
-        Manage applications, see inspection histories, submit reports, and more.
+        Manage applications, see inspection histories, get ducks, and more.
       </Paragraph>
       <Button
         block={false}
@@ -46,7 +46,7 @@ exports[`LandingPage renders properly 1`] = `
         type="primary"
       >
         <a
-          href="<URL>undefined&kc_idp_hint=idir"
+          href="<URL>http://localhostundefined/return-page?type=login&kc_idp_hint=idir"
         >
           Log in
         </a>
@@ -180,8 +180,10 @@ exports[`LandingPage renders properly 1`] = `
       <Paragraph>
         Contact us at 
         <a
-          href="mailto:undefined"
-        />
+          href="mailto:ducklord@duckz.com"
+        >
+          ducklord@duckz.com
+        </a>
          to request access to Dormant Site Reclamation Project.
       </Paragraph>
       <Paragraph
@@ -278,8 +280,10 @@ exports[`LandingPage renders properly 1`] = `
             <Paragraph>
               Email us at 
               <a
-                href="mailto:undefined"
-              />
+                href="mailto:ducklord@duckz.com"
+              >
+                ducklord@duckz.com
+              </a>
               .
             </Paragraph>
           </Col>
