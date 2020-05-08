@@ -1,4 +1,4 @@
-import { KEYCLOAK } from "@common/constants/environment";
+import { KEYCLOAK } from "@/constants/environment";
 import { signOutFromSSO, signOutFromSiteMinder } from "@/utils/authenticationHelpers";
 import {
   KEYCLOAK_LOGOUT_REDIRECT_URI,

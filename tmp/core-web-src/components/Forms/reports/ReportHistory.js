@@ -5,7 +5,7 @@ import { Button } from "antd";
 import {
   getMineReportDefinitionOptions,
   getDropdownMineReportStatusOptions,
-} from "@common/selectors/staticContentSelectors";
+} from "@/selectors/staticContentSelectors";
 import ReportHistorySubmissionSummary from "@/components/Forms/reports/ReportHistorySubmissionSummary";
 import customPropTypes from "@/customPropTypes";
 

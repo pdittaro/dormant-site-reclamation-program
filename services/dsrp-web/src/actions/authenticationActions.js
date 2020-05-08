@@ -1,4 +1,4 @@
-import * as ActionTypes from "@/constants/actionTypes";
+import * as ActionTypes from "../constants/actionTypes";
 
 export const authenticateUser = (userInfo = {}) => ({
   type: ActionTypes.AUTHENTICATE_USER,
@@ -15,6 +15,13 @@ export const storeKeycloakData = (data = {}) => ({
   type: ActionTypes.STORE_KEYCLOAK_DATA,
   payload: {
     data,
+  },
+});
+
+export const storeUserAccessData = (roles = {}) => ({
+  type: ActionTypes.STORE_USER_ACCESS_DATA,
+  payload: {
+    roles,
   },
 });
 

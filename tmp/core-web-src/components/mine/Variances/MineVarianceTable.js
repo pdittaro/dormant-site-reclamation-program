@@ -6,11 +6,11 @@ import { Link } from "react-router-dom";
 import {
   getVarianceStatusOptionsHash,
   getHSRCMComplianceCodesHash,
-} from "@common/selectors/staticContentSelectors";
-import { getInspectorsHash } from "@common/selectors/partiesSelectors";
-import { formatDate, truncateFilename } from "@common/utils/helpers";
-import { downloadFileFromDocumentManager } from "@common/utils/actionlessNetworkCalls";
-import * as Strings from "@common/constants/strings";
+} from "@/selectors/staticContentSelectors";
+import { getInspectorsHash } from "@/selectors/partiesSelectors";
+import { formatDate, truncateFilename } from "@/utils/helpers";
+import { downloadFileFromDocumentManager } from "@/utils/actionlessNetworkCalls";
+import * as Strings from "@/constants/strings";
 import CustomPropTypes from "@/customPropTypes";
 import AuthorizationWrapper from "@/components/common/wrappers/AuthorizationWrapper";
 import * as Permission from "@/constants/permissions";

@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Alert } from "antd";
 import { connect } from "react-redux";
-import { formatMoney } from "@common/utils/helpers";
+import { formatMoney } from "@/utils/helpers";
 import { getFormValues } from "redux-form";
 import * as FORM from "@/constants/forms";
 import ReclamationInvoiceForm from "@/components/Forms/Securities/ReclamationInvoiceForm";

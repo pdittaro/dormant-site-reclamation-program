@@ -1,20 +1,20 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import * as Strings from "@common/constants/strings";
+import * as Strings from "@/constants/strings";
 import {
   formatDate,
   truncateFilename,
   dateSorter,
   nullableStringSorter,
   formatComplianceCodeValueOrLabel,
-} from "@common/utils/helpers";
-import { downloadFileFromDocumentManager } from "@common/utils/actionlessNetworkCalls";
+} from "@/utils/helpers";
+import { downloadFileFromDocumentManager } from "@/utils/actionlessNetworkCalls";
 import {
   getMineReportCategoryOptionsHash,
   getMineReportStatusOptionsHash,
   getMineReportDefinitionHash,
-} from "@common/selectors/staticContentSelectors";
+} from "@/selectors/staticContentSelectors";
 import { Link } from "react-router-dom";
 import { Badge } from "antd";
 import NullScreen from "@/components/common/NullScreen";

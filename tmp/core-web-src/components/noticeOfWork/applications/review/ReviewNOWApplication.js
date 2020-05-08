@@ -10,7 +10,7 @@ import {
   getMineRegionDropdownOptions,
   getDropdownNoticeOfWorkApplicationTypeOptions,
   getDropdownNoticeOfWorkApplicationPermitTypeOptions,
-} from "@common/selectors/staticContentSelectors";
+} from "@/selectors/staticContentSelectors";
 import {
   required,
   lat,
@@ -19,7 +19,7 @@ import {
   number,
   requiredRadioButton,
   currency,
-} from "@common/utils/Validate";
+} from "@/utils/validate";
 import CustomPropTypes from "@/customPropTypes";
 import RenderField from "@/components/common/RenderField";
 import RenderDate from "@/components/common/RenderDate";
@@ -34,7 +34,7 @@ import NOWDocuments from "@/components/noticeOfWork/applications//NOWDocuments";
 import NOWSubmissionDocuments from "@/components/noticeOfWork/applications//NOWSubmissionDocuments";
 import ReviewNOWContacts from "./ReviewNOWContacts";
 import { NOWFieldOriginTooltip } from "@/components/common/CoreTooltip";
-import { currencyMask } from "@common/utils/helpers";
+import { currencyMask } from "@/utils/helpers";
 
 /**
  * @constant ReviewNOWApplication renders edit/view for the NoW Application review step

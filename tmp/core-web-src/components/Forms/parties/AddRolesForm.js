@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Field, reduxForm } from "redux-form";
 import { AutoComplete, Collapse, Button, Icon, Popconfirm, Form, Col, Row } from "antd";
-import { required } from "@common/utils/Validate";
+import { required } from "@/utils/validate";
 import CustomPropTypes from "@/customPropTypes";
 import * as FORM from "@/constants/forms";
 import { TRASHCAN } from "@/constants/assets";

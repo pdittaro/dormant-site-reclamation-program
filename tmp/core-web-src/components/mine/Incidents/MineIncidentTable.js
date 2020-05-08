@@ -10,15 +10,15 @@ import {
   getIncidentCategoryCodeHash,
   getHSRCMComplianceCodesHash,
   getDropdownIncidentStatusCodeOptions,
-} from "@common/selectors/staticContentSelectors";
-import { downloadFileFromDocumentManager } from "@common/utils/actionlessNetworkCalls";
+} from "@/selectors/staticContentSelectors";
+import { downloadFileFromDocumentManager } from "@/utils/actionlessNetworkCalls";
 import {
   formatDate,
   dateSorter,
   optionsFilterLabelAndValue,
   truncateFilename,
-} from "@common/utils/helpers";
-import * as Strings from "@common/constants/strings";
+} from "@/utils/helpers";
+import * as Strings from "@/constants/strings";
 import { EDIT_OUTLINE_VIOLET } from "@/constants/assets";
 import AuthorizationWrapper from "@/components/common/wrappers/AuthorizationWrapper";
 import * as Permission from "@/constants/permissions";

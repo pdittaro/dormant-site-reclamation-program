@@ -2,9 +2,9 @@ import { showLoading, hideLoading } from "react-redux-loading-bar";
 import { request, success, error } from "../actions/genericActions";
 import * as reducerTypes from "../constants/reducerTypes";
 import * as orgbookActions from "../actions/orgbookActions";
-import * as API from "../constants/API";
+import * as API from "../constants/api";
 import { ENVIRONMENT } from "../constants/environment";
-import { createRequestHeader } from "../utils/RequestHeaders";
+import { createRequestHeader } from "../utils/requestHeaders";
 import CustomAxios from "../customAxios";
 
 export const searchOrgBook = (search) => (dispatch) => {

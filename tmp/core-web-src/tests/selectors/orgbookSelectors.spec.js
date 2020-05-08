@@ -1,7 +1,7 @@
-import { getSearchOrgBookResults, getOrgBookCredential } from "@common/selectors/orgbookSelectors";
-import { orgbookReducer } from "@common/reducers/orgbookReducer";
-import { storeSearchOrgBookResults, storeOrgBookCredential } from "@common/actions/orgbookActions";
-import { ORGBOOK } from "@common/constants/reducerTypes";
+import { getSearchOrgBookResults, getOrgBookCredential } from "@/selectors/orgbookSelectors";
+import { orgbookReducer } from "@/reducers/orgbookReducer";
+import { storeSearchOrgBookResults, storeOrgBookCredential } from "@/actions/orgbookActions";
+import { ORGBOOK } from "@/constants/reducerTypes";
 import * as MOCK from "@/tests/mocks/dataMocks";
 
 describe("getSearchOrgBookResults", () => {

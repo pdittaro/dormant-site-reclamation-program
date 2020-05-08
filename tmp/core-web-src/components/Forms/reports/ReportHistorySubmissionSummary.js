@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Divider } from "antd";
-import { formatDate } from "@common/utils/helpers";
+import { formatDate } from "@/utils/helpers";
 import FormItemLabel from "@/components/common/FormItemLabel";
 import CommentPanel from "@/components/common/comments/CommentPanel";
 import { UploadedDocumentsTable } from "@/components/common/UploadedDocumentTable";

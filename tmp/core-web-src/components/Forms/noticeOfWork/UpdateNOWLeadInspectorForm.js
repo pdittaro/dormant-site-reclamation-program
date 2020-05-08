@@ -2,7 +2,7 @@ import React from "react";
 import { Field, reduxForm } from "redux-form";
 import { Form } from "antd";
 import PropTypes from "prop-types";
-import { required } from "@common/utils/Validate";
+import { required } from "@/utils/validate";
 import * as FORM from "@/constants/forms";
 import { renderConfig } from "@/components/common/config";
 import CustomPropTypes from "@/customPropTypes";

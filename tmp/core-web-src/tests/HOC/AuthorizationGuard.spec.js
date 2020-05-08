@@ -1,6 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
-import { AuthorizationGuard } from "@/HOC/AuthorizationGuard";
+import { AuthorizationGuard } from "@/hoc/AuthorizationGuard";
 import * as Mock from "@/tests/mocks/dataMocks";
 
 const Component = AuthorizationGuard("role_edit_mines")(() => <div>Test</div>);

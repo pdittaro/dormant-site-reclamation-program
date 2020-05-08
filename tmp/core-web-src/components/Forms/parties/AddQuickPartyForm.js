@@ -2,8 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Field, reduxForm } from "redux-form";
 import { Form, Button, Col, Row } from "antd";
-import { required, email, phoneNumber, maxLength, number } from "@common/utils/Validate";
-import { resetForm, normalizePhone } from "@common/utils/helpers";
+import { required, email, phoneNumber, maxLength, number } from "@/utils/validate";
+import { resetForm, normalizePhone } from "@/utils/helpers";
 import * as FORM from "@/constants/forms";
 import { renderConfig } from "@/components/common/config";
 

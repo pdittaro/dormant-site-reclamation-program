@@ -7,11 +7,11 @@ import {
   fetchMineReports,
   updateMineReport,
   deleteMineReport,
-} from "@common/actionCreators/reportActionCreator";
-import { getMineReports } from "@common/selectors/reportSelectors";
-import { getMines, getMineGuid } from "@common/selectors/mineSelectors";
-import { openModal, closeModal } from "@common/actions/modalActions";
-import { getMineReportDefinitionOptions } from "@common/reducers/staticContentReducer";
+} from "@/actionCreators/reportActionCreator";
+import { getMineReports } from "@/selectors/reportSelectors";
+import { getMines, getMineGuid } from "@/selectors/mineSelectors";
+import { openModal, closeModal } from "@/actions/modalActions";
+import { getMineReportDefinitionOptions } from "@/reducers/staticContentReducer";
 import MineReportTable from "@/components/mine/Reports/MineReportTable";
 import { modalConfig } from "@/components/modalContent/config";
 import CustomPropTypes from "@/customPropTypes";

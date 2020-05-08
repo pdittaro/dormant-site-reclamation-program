@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import { fetchMineRecordById } from "@common/actionCreators/mineActionCreator";
+import { fetchMineRecordById } from "@/actionCreators/mineActionCreator";
 import ChangeNOWLocationForm from "@/components/Forms/noticeOfWork/ChangeNOWLocationForm";
 import LoadingWrapper from "@/components/common/wrappers/LoadingWrapper";
 
@@ -48,7 +48,4 @@ const mapDispatchToProps = (dispatch) =>
     dispatch
   );
 
-export default connect(
-  null,
-  mapDispatchToProps
-)(ChangeNOWLocationModal);
+export default connect(null, mapDispatchToProps)(ChangeNOWLocationModal);

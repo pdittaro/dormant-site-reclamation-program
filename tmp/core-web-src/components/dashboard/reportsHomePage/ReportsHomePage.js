@@ -3,14 +3,14 @@ import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import queryString from "query-string";
-import * as Strings from "@common/constants/strings";
+import * as Strings from "@/constants/strings";
 import {
   fetchReports,
   updateMineReport,
   deleteMineReport,
-} from "@common/actionCreators/reportActionCreator";
-import { changeModalTitle, openModal, closeModal } from "@common/actions/modalActions";
-import { getReports, getReportsPageData } from "@common/selectors/reportSelectors";
+} from "@/actionCreators/reportActionCreator";
+import { changeModalTitle, openModal, closeModal } from "@/actions/modalActions";
+import { getReports, getReportsPageData } from "@/selectors/reportSelectors";
 import * as routes from "@/constants/routes";
 import CustomPropTypes from "@/customPropTypes";
 import ReportsTable from "@/components/dashboard/reportsHomePage/ReportsTable";

@@ -4,9 +4,8 @@ import { Link, withRouter } from "react-router-dom";
 import { Menu, Dropdown, Button, Icon, Divider } from "antd";
 import MediaQuery from "react-responsive";
 import PropTypes from "prop-types";
-import * as COMMON_ENV from "@common/constants/environment";
+import * as ENV from "@/constants/environment";
 import * as route from "@/constants/routes";
-import * as MINESPACE_ENV from "@/constants/environment";
 import { signOutFromSiteMinder } from "@/utils/authenticationHelpers";
 import { isAuthenticated, getUserInfo } from "@/selectors/authenticationSelectors";
 import { MENU } from "@/constants/assets";
@@ -46,9 +45,9 @@ export class HeaderDropdown extends Component {
     const dropdownMenuMobile = (
       <Menu className="header-dropdown-menu">
         <AuthorizationWrapper>
-          <Menu.Item key="mines">
+          <Menu.Item key="apply">
             <Button className="header-dropdown-item-button">
-              <Link to={route.MINES.route}>My Mines</Link>
+              <Link to={null}/*{route.MINES.route}*/>Apply</Link>
             </Button>
           </Menu.Item>
         </AuthorizationWrapper>
@@ -67,7 +66,7 @@ export class HeaderDropdown extends Component {
       return (
         <Button className="login-btn">
           <a
-            href={`${COMMON_ENV.KEYCLOAK.loginURL}${MINESPACE_ENV.BCEID_LOGIN_REDIRECT_URI}&kc_idp_hint=${COMMON_ENV.KEYCLOAK.idpHint}`}
+            href={`${ENV.KEYCLOAK.loginURL}${ENV.BCEID_LOGIN_REDIRECT_URI}&kc_idp_hint=${ENV.KEYCLOAK.idpHint}`}
           >
             Log in
           </a>
@@ -79,8 +78,8 @@ export class HeaderDropdown extends Component {
       <span>
         <MediaQuery minWidth={smallestDesktopWidth}>
           <AuthorizationWrapper>
-            <Link to={route.MINES.route} className={this.setActiveLink(route.MINES.route)}>
-              My Mines
+            <Link to={null}/*{route.MINES.route} className={this.setActiveLink(route.MINES.route)}*/>
+              Apply
             </Link>
           </AuthorizationWrapper>
           {/* Disabled until we implement this */}

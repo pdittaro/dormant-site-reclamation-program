@@ -3,14 +3,14 @@ import PropTypes from "prop-types";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { Button, Icon, Progress, notification } from "antd";
-import { getDocumentDownloadToken } from "@common/utils/actionlessNetworkCalls";
-import { getDocumentDownloadState } from "@common/selectors/noticeOfWorkSelectors";
+import { getDocumentDownloadToken } from "@/utils/actionlessNetworkCalls";
+import { getDocumentDownloadState } from "@/selectors/noticeOfWorkSelectors";
 import {
   setNoticeOfWorkApplicationDocumentDownloadState,
   fetchImportedNoticeOfWorkApplication,
   updateNoticeOfWorkApplication,
-} from "@common/actionCreators/noticeOfWorkActionCreator";
-import { openModal, closeModal } from "@common/actions/modalActions";
+} from "@/actionCreators/noticeOfWorkActionCreator";
+import { openModal, closeModal } from "@/actions/modalActions";
 import { EDIT_OUTLINE } from "@/constants/assets";
 import { modalConfig } from "@/components/modalContent/config";
 import { COLOR } from "@/constants/styles";

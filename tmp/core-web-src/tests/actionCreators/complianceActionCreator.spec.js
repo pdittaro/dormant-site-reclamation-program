@@ -1,9 +1,9 @@
 import MockAdapter from "axios-mock-adapter";
 import axios from "axios";
-import { fetchMineComplianceInfo } from "@common/actionCreators/complianceActionCreator";
-import * as genericActions from "@common/actions/genericActions";
-import { ENVIRONMENT } from "@common/constants/environment";
-import * as API from "@common/constants/API";
+import { fetchMineComplianceInfo } from "@/actionCreators/complianceActionCreator";
+import * as genericActions from "@/actions/genericActions";
+import { ENVIRONMENT } from "@/constants/environment";
+import * as API from "@/constants/api";
 import * as MOCK from "@/tests/mocks/dataMocks";
 
 const dispatch = jest.fn();

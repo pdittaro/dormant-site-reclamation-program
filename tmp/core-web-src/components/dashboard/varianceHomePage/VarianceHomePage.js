@@ -4,7 +4,7 @@ import { bindActionCreators } from "redux";
 import queryString from "query-string";
 import moment from "moment";
 import PropTypes from "prop-types";
-import { openModal, closeModal } from "@common/actions/modalActions";
+import { openModal, closeModal } from "@/actions/modalActions";
 import {
   getMineRegionHash,
   getMineTenureTypesHash,
@@ -13,14 +13,14 @@ import {
   getFilterVarianceStatusOptions,
   getDropdownHSRCMComplianceCodes,
   getMineRegionDropdownOptions,
-} from "@common/selectors/staticContentSelectors";
-import { getVariances, getVariancePageData } from "@common/selectors/varianceSelectors";
+} from "@/selectors/staticContentSelectors";
+import { getVariances, getVariancePageData } from "@/selectors/varianceSelectors";
 import {
   fetchVariances,
   updateVariance,
   addDocumentToVariance,
-} from "@common/actionCreators/varianceActionCreator";
-import * as Strings from "@common/constants/strings";
+} from "@/actionCreators/varianceActionCreator";
+import * as Strings from "@/constants/strings";
 import { modalConfig } from "@/components/modalContent/config";
 import CustomPropTypes from "@/customPropTypes";
 import { VarianceTable } from "@/components/dashboard/customHomePage/VarianceTable";

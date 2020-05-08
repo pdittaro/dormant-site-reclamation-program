@@ -2,12 +2,8 @@ import React, { Component } from "react";
 import { Icon, Input, Button, Badge } from "antd";
 import { Link, withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
-import {
-  formatDate,
-  optionsFilterLabelAndValue,
-  optionsFilterLabelOnly,
-} from "@common/utils/helpers";
-import * as Strings from "@common/constants/strings";
+import { formatDate, optionsFilterLabelAndValue, optionsFilterLabelOnly } from "@/utils/helpers";
+import * as Strings from "@/constants/strings";
 import CustomPropTypes from "@/customPropTypes";
 import * as router from "@/constants/routes";
 import NullScreen from "@/components/common/NullScreen";

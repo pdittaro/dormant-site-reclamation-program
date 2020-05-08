@@ -36,10 +36,10 @@ if (opt?.h) {
 }
 
 def config = OpenShiftHelper.loadDeploymentConfig(opt)
-def toolsNamespace = 'empr-mds-tools'
+def toolsNamespace = 'eazios-tools'
 
 def appLabel="${config.app.deployment.id}"
-def routes = ocGet(['routes','-l', "app=${appLabel},component=mds-nginx,route=core", "--namespace=${config.app.deployment.namespace}"])
+def routes = ocGet(['routes','-l', "app=${appLabel},component=dsrp-nginx,route=core", "--namespace=${config.app.deployment.namespace}"])
 
 println routes
 

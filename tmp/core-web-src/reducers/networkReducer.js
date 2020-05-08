@@ -1,4 +1,4 @@
-import { REQUEST, SUCCESS, ERROR } from "@common/constants/actionTypes";
+import { REQUEST, SUCCESS, ERROR } from "@/constants/actionTypes";
 
 /**
  * @file networkReducer.js

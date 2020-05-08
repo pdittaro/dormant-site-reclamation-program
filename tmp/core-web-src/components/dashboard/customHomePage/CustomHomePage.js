@@ -2,15 +2,15 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import PropTypes from "prop-types";
-import { openModal, closeModal } from "@common/actions/modalActions";
+import { openModal, closeModal } from "@/actions/modalActions";
 import {
   getMineRegionHash,
   getMineTenureTypesHash,
   getCommodityOptionHash,
   getHSRCMComplianceCodesHash,
-} from "@common/selectors/staticContentSelectors";
-import { getSubscribedMines } from "@common/selectors/mineSelectors";
-import { fetchSubscribedMinesByUser, unSubscribe } from "@common/actionCreators/mineActionCreator";
+} from "@/selectors/staticContentSelectors";
+import { getSubscribedMines } from "@/selectors/mineSelectors";
+import { fetchSubscribedMinesByUser, unSubscribe } from "@/actionCreators/mineActionCreator";
 import CustomPropTypes from "@/customPropTypes";
 import { SubscriptionTable } from "./SubscriptionTable";
 
@@ -88,7 +88,4 @@ const mapDispatchToProps = (dispatch) =>
     dispatch
   );
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(CustomHomePage);
+export default connect(mapStateToProps, mapDispatchToProps)(CustomHomePage);

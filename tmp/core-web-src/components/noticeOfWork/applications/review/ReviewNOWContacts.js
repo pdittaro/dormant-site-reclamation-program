@@ -1,8 +1,8 @@
 import React from "react";
 import { PropTypes } from "prop-types";
 import { Row, Col, Card } from "antd";
-import { formatTitleString } from "@common/utils/helpers";
-import * as Strings from "@common/constants/strings";
+import { formatTitleString } from "@/utils/helpers";
+import * as Strings from "@/constants/strings";
 import NullScreen from "@/components/common/NullScreen";
 import CustomPropTypes from "@/customPropTypes";
 import Address from "@/components/common/Address";

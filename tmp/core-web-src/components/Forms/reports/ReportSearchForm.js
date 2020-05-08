@@ -10,7 +10,7 @@ import {
   getDropdownMineReportCategoryOptions,
   getDropdownMineReportDefinitionOptions,
   getMineRegionDropdownOptions,
-} from "@common/selectors/staticContentSelectors";
+} from "@/selectors/staticContentSelectors";
 import * as FORM from "@/constants/forms";
 import { renderConfig } from "@/components/common/config";
 import CustomPropTypes from "@/customPropTypes";

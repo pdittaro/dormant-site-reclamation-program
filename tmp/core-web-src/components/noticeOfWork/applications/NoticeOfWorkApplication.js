@@ -10,25 +10,25 @@ import {
   fetchOriginalNoticeOfWorkApplication,
   createNoticeOfWorkApplicationProgress,
   updateNoticeOfWorkApplication,
-} from "@common/actionCreators/noticeOfWorkActionCreator";
-import { fetchMineRecordById } from "@common/actionCreators/mineActionCreator";
-import { openModal, closeModal } from "@common/actions/modalActions";
-import { getDropdownInspectors, getInspectorsHash } from "@common/selectors/partiesSelectors";
+} from "@/actionCreators/noticeOfWorkActionCreator";
+import { fetchMineRecordById } from "@/actionCreators/mineActionCreator";
+import { openModal, closeModal } from "@/actions/modalActions";
+import { getDropdownInspectors, getInspectorsHash } from "@/selectors/partiesSelectors";
 import {
   getNoticeOfWork,
   getOriginalNoticeOfWork,
   getNOWReclamationSummary,
-} from "@common/selectors/noticeOfWorkSelectors";
-import { getMines } from "@common/selectors/mineSelectors";
+} from "@/selectors/noticeOfWorkSelectors";
+import { getMines } from "@/selectors/mineSelectors";
 import {
   getDropdownNoticeOfWorkApplicationStatusOptions,
   getNoticeOfWorkApplicationProgressStatusCodeOptions,
   getGeneratableNoticeOfWorkApplicationDocumentTypeOptions,
   getNoticeOfWorkApplicationStatusOptionsHash,
-} from "@common/selectors/staticContentSelectors";
-import { formatDate, flattenObject } from "@common/utils/helpers";
-import { clearNoticeOfWorkApplication } from "@common/actions/noticeOfWorkActions";
-import { downloadNowDocument } from "@common/utils/actionlessNetworkCalls";
+} from "@/selectors/staticContentSelectors";
+import { formatDate, flattenObject } from "@/utils/helpers";
+import { clearNoticeOfWorkApplication } from "@/actions/noticeOfWorkActions";
+import { downloadNowDocument } from "@/utils/actionlessNetworkCalls";
 import {
   generateNoticeOfWorkApplicationDocument,
   fetchNoticeOfWorkApplicationContextTemplate,
@@ -682,19 +682,21 @@ export class NoticeOfWorkApplication extends Component {
             Change the Lead Inspector
           </Menu.Item>
         )}
-        {// TODO: Determine the actual condition that determines whether or not to show this submenu.
-        true && Object.values(this.props.generatableApplicationDocuments).length > 0 && (
-          <Menu.SubMenu key="generate-documents" title="Generate Documents">
-            {Object.values(this.props.generatableApplicationDocuments).map((document) => (
-              <Menu.Item
-                key={document.now_application_document_type_code}
-                onClick={this.handleGenerateDocument}
-              >
-                {document.description}
-              </Menu.Item>
-            ))}
-          </Menu.SubMenu>
-        )}
+        {
+          // TODO: Determine the actual condition that determines whether or not to show this submenu.
+          true && Object.values(this.props.generatableApplicationDocuments).length > 0 && (
+            <Menu.SubMenu key="generate-documents" title="Generate Documents">
+              {Object.values(this.props.generatableApplicationDocuments).map((document) => (
+                <Menu.Item
+                  key={document.now_application_document_type_code}
+                  onClick={this.handleGenerateDocument}
+                >
+                  {document.description}
+                </Menu.Item>
+              ))}
+            </Menu.SubMenu>
+          )
+        }
         {!isDecision && this.props.noticeOfWork.lead_inspector_party_guid && (
           <Menu.Item
             key="start-next-step"

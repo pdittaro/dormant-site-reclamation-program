@@ -43,9 +43,9 @@ import {
   noticeOfWorkReducer,
   securitiesReducer,
   orgbookReducer,
-} from "@common/reducers";
-import * as reducerTypes from "@common/constants/reducerTypes";
-import { createReducer } from "@common/utils/helpers";
+} from "@/reducers";
+import * as reducerTypes from "@/constants/reducerTypes";
+import { createReducer } from "@/utils/helpers";
 import networkReducer from "./networkReducer";
 import documentReducer from "./documentReducer";
 

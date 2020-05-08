@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Form, Select } from "antd";
-import { caseInsensitiveLabelFilter } from "@common/utils/helpers";
+import { caseInsensitiveLabelFilter } from "@/utils/helpers";
 import CustomPropTypes from "@/customPropTypes";
 
 /**

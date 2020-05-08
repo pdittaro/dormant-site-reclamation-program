@@ -1,5 +1,5 @@
-import { networkReducer } from "@common/reducers/networkReducer";
-import { request, success, error } from "@common/actions/genericActions";
+import { networkReducer } from "@/reducers/networkReducer";
+import { request, success, error } from "@/actions/genericActions";
 
 const baseExpectedValue = {
   isFetching: false,

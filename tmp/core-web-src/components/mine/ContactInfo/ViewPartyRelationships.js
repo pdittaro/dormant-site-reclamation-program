@@ -12,17 +12,17 @@ import {
   updatePartyRelationship,
   fetchPartyRelationships,
   addDocumentToRelationship,
-} from "@common/actionCreators/partiesActionCreator";
-import { createTailingsStorageFacility } from "@common/actionCreators/mineActionCreator";
-import { getPartyRelationships } from "@common/selectors/partiesSelectors";
+} from "@/actionCreators/partiesActionCreator";
+import { createTailingsStorageFacility } from "@/actionCreators/mineActionCreator";
+import { getPartyRelationships } from "@/selectors/partiesSelectors";
 import {
   getPartyRelationshipTypes,
   getPartyRelationshipTypesList,
-} from "@common/selectors/staticContentSelectors";
+} from "@/selectors/staticContentSelectors";
 
-import { getUserAccessData } from "@common/selectors/authenticationSelectors";
-import { USER_ROLES } from "@common/constants/environment";
-import { getPermits } from "@common/reducers/permitReducer";
+import { getUserAccessData } from "@/selectors/authenticationSelectors";
+import { USER_ROLES } from "@/constants/environment";
+import { getPermits } from "@/reducers/permitReducer";
 import CustomPropTypes from "@/customPropTypes";
 import * as router from "@/constants/routes";
 import { modalConfig } from "@/components/modalContent/config";
