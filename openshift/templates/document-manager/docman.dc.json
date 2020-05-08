@@ -100,7 +100,7 @@
     },
     {
       "name": "ELASTIC_SERVICE_NAME",
-      "value": "MDS Document Manager Dev"
+      "value": "DSRP Document Manager Dev"
     },
     {
       "name": "REDIS_CONFIG_NAME",

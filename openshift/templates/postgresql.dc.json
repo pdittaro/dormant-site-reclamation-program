@@ -67,7 +67,7 @@
       "displayName": "PostgreSQL Database Name",
       "name": "POSTGRESQL_DATABASE",
       "required": true,
-      "value": "mds"
+      "value": "dsrp"
     },
     {
       "description": "Volume space available for data, e.g. 512Mi, 2Gi.",
