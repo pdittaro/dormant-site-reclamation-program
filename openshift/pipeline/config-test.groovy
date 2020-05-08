@@ -99,37 +99,11 @@ app {
                             'NODE_ENV': "${vars.deployment.node_env}",
                             'FN_LAYER_URL': "${vars.deployment.fn_layer_url}",
                             'KEYCLOAK_RESOURCE': "${vars.keycloak.resource}",
-                            'KEYCLOAK_CLIENT_ID': "${vars.keycloak.clientId_core}",
+                            'KEYCLOAK_CLIENT_ID': "${vars.keycloak.clientId_dsrp}",
                             'KEYCLOAK_URL': "${vars.keycloak.url}",
-                            'KEYCLOAK_IDP_HINT': "${vars.keycloak.idpHint_core}",
-                            'API_URL': "https://${vars.modules.'dsrp-nginx'.HOST_CORE}${vars.modules.'dsrp-nginx'.PATH}/api",
-                            'DOCUMENT_MANAGER_URL': "https://${vars.modules.'dsrp-nginx'.HOST_CORE}${vars.modules.'dsrp-nginx'.PATH}/document-manager"
-                    ]
-                ],
-                [
-                    'file':'openshift/templates/_nodejs.dc.json',
-                    'params':[
-                            'NAME':"dsrp-frontend-public",
-                            'SUFFIX': "${vars.deployment.suffix}",
-                            'APPLICATION_SUFFIX': "${vars.deployment.application_suffix}",
-                            'TAG_NAME':"${app.deployment.version}",
-                            'PORT':3020,
-                            'CPU_REQUEST':"${vars.resources.node.cpu_request}",
-                            'CPU_LIMIT':"${vars.resources.node.cpu_limit}",
-                            'MEMORY_REQUEST':"${vars.resources.node.memory_request}",
-                            'MEMORY_LIMIT':"${vars.resources.node.memory_limit}",
-                            'REPLICA_MIN':"${vars.resources.node.replica_min}",
-                            'REPLICA_MAX':"${vars.resources.node.replica_max}",
-                            'APPLICATION_DOMAIN': "${vars.modules.'dsrp-frontend-public'.HOST}",
-                            'BASE_PATH': "${vars.modules.'dsrp-frontend-public'.PATH}",
-                            'NODE_ENV': "${vars.deployment.node_env}",
-                            'KEYCLOAK_RESOURCE': "${vars.keycloak.resource}",
-                            'KEYCLOAK_CLIENT_ID': "${vars.keycloak.clientId_minespace}",
-                            'KEYCLOAK_URL': "${vars.keycloak.url}",
-                            'KEYCLOAK_IDP_HINT': "${vars.keycloak.idpHint_minespace}",
-                            'SITEMINDER_URL': "${vars.keycloak.siteminder_url}",
-                            'API_URL': "https://${vars.modules.'dsrp-nginx'.HOST_CORE}${vars.modules.'dsrp-nginx'.PATH}/api",
-                            'DOCUMENT_MANAGER_URL': "https://${vars.modules.'dsrp-nginx'.HOST_CORE}${vars.modules.'dsrp-nginx'.PATH}/document-manager"
+                            'KEYCLOAK_IDP_HINT': "${vars.keycloak.idpHint_dsrp}",
+                            'API_URL': "https://${vars.modules.'dsrp-nginx'.HOST_dsrp}${vars.modules.'dsrp-nginx'.PATH}/api",
+                            'DOCUMENT_MANAGER_URL': "https://${vars.modules.'dsrp-nginx'.HOST_dsrp}${vars.modules.'dsrp-nginx'.PATH}/document-manager"
                     ]
                 ],
                 [
@@ -145,14 +119,12 @@ app {
                             'MEMORY_LIMIT':"${vars.resources.nginx.memory_limit}",
                             'REPLICA_MIN':"${vars.resources.nginx.replica_min}",
                             'REPLICA_MAX':"${vars.resources.nginx.replica_max}",
-                            'CORE_DOMAIN': "${vars.modules.'dsrp-nginx'.HOST_CORE}",
-                            'MINESPACE_DOMAIN': "${vars.modules.'dsrp-nginx'.HOST_MINESPACE}",
+                            'DSRP_DOMAIN': "${vars.modules.'dsrp-nginx'.HOST_dsrp}",
                             'ROUTE': "${vars.modules.'dsrp-nginx'.ROUTE}",
                             'PATH_PREFIX': "${vars.modules.'dsrp-nginx'.PATH}",
-                            'CORE_SERVICE_URL': "${vars.modules.'dsrp-frontend'.HOST}",
+                            'DSRP_SERVICE_URL': "${vars.modules.'dsrp-frontend'.HOST}",
                             'NRIS_API_SERVICE_URL': "${vars.modules.'dsrp-nris-backend'.HOST}",
                             'DOCUMENT_MANAGER_SERVICE_URL': "${vars.modules.'dsrp-docman-backend'.HOST}",
-                            'MINESPACE_SERVICE_URL': "${vars.modules.'dsrp-frontend-public'.HOST}",
                             'API_SERVICE_URL': "${vars.modules.'dsrp-python-backend'.HOST}",
                     ]
                 ],
@@ -172,17 +144,17 @@ app {
                             'REPLICA_MIN':"${vars.resources.python.replica_min}",
                             'REPLICA_MAX':"${vars.resources.python.replica_max}",
                             'JWT_OIDC_WELL_KNOWN_CONFIG': "${vars.keycloak.known_config_url}",
-                            'JWT_OIDC_AUDIENCE': "${vars.keycloak.clientId_core}",
+                            'JWT_OIDC_AUDIENCE': "${vars.keycloak.clientId_dsrp}",
                             'APPLICATION_DOMAIN': "${vars.modules.'dsrp-python-backend'.HOST}",
                             'BASE_PATH': "${vars.modules.'dsrp-python-backend'.PATH}",
                             'DB_CONFIG_NAME': "dsrp-postgresql${vars.deployment.suffix}",
                             'DB_NRIS_CONFIG_NAME': "dsrp-postgresql${vars.deployment.suffix}-nris",
                             'REDIS_CONFIG_NAME': "dsrp-redis${vars.deployment.suffix}",
                             'CACHE_REDIS_HOST': "dsrp-redis${vars.deployment.suffix}",
-                            'ELASTIC_ENABLED': "${vars.deployment.elastic_enabled_core}",
+                            'ELASTIC_ENABLED': "${vars.deployment.elastic_enabled_dsrp}",
                             'ELASTIC_SERVICE_NAME': "${vars.deployment.elastic_service_name}",
                             'ENVIRONMENT_NAME':"${app.deployment.env.name}",
-                            'API_URL': "https://${vars.modules.'dsrp-nginx'.HOST_CORE}${vars.modules.'dsrp-nginx'.PATH}/api",
+                            'API_URL': "https://${vars.modules.'dsrp-nginx'.HOST_dsrp}${vars.modules.'dsrp-nginx'.PATH}/api",
                             'NRIS_API_URL': "${vars.modules.'dsrp-nris-backend'.HOST}${vars.modules.'dsrp-nris-backend'.PATH}",
                             'DOCUMENT_MANAGER_URL': "${vars.modules.'dsrp-docman-backend'.HOST}${vars.modules.'dsrp-docman-backend'.PATH}",
                             'DOCUMENT_GENERATOR_URL': "${vars.modules.'dsrp-docgen-api'.HOST}",
@@ -203,19 +175,19 @@ app {
                             'REPLICA_MIN':"${vars.resources.python_lite.replica_min}",
                             'REPLICA_MAX':"${vars.resources.python_lite.replica_max}",
                             'JWT_OIDC_WELL_KNOWN_CONFIG': "${vars.keycloak.known_config_url}",
-                            'JWT_OIDC_AUDIENCE': "${vars.keycloak.clientId_core}",
+                            'JWT_OIDC_AUDIENCE': "${vars.keycloak.clientId_dsrp}",
                             'APPLICATION_DOMAIN': "${vars.modules.'dsrp-python-backend'.HOST}",
                             'BASE_PATH': "${vars.modules.'dsrp-docman-backend'.PATH}",
                             'DB_HOST': "dsrp-postgresql${vars.deployment.suffix}",
                             'DB_CONFIG_NAME': "dsrp-postgresql${vars.deployment.suffix}",
                             'REDIS_CONFIG_NAME': "dsrp-redis${vars.deployment.suffix}",
                             'CACHE_REDIS_HOST': "dsrp-redis${vars.deployment.suffix}",
-                            'ELASTIC_ENABLED': "${vars.deployment.elastic_enabled_core}",
+                            'ELASTIC_ENABLED': "${vars.deployment.elastic_enabled_dsrp}",
                             'ELASTIC_SERVICE_NAME': "${vars.deployment.elastic_service_name_docman}",
                             'DOCUMENT_CAPACITY':"${vars.DOCUMENT_PVC_SIZE}",
                             'DOCUMENT_CAPACITY_LOWER':"${vars.DOCUMENT_PVC_SIZE.toString().toLowerCase()}",
                             'ENVIRONMENT_NAME':"${app.deployment.env.name}",
-                            'API_URL': "https://${vars.modules.'dsrp-nginx'.HOST_CORE}${vars.modules.'dsrp-nginx'.PATH}/document-manager",
+                            'API_URL': "https://${vars.modules.'dsrp-nginx'.HOST_dsrp}${vars.modules.'dsrp-nginx'.PATH}/document-manager",
                     ]
                 ],
                 [
@@ -233,7 +205,7 @@ app {
                             'REPLICA_MIN':"${vars.resources.python_lite.replica_min}",
                             'REPLICA_MAX':"${vars.resources.python_lite.replica_max}",
                             'JWT_OIDC_WELL_KNOWN_CONFIG': "${vars.keycloak.known_config_url}",
-                            'JWT_OIDC_AUDIENCE': "${vars.keycloak.clientId_core}",
+                            'JWT_OIDC_AUDIENCE': "${vars.keycloak.clientId_dsrp}",
                             'APPLICATION_DOMAIN': "${vars.modules.'dsrp-nris-backend'.HOST}",
                             'BASE_PATH': "${vars.modules.'dsrp-nris-backend'.PATH}",
                             'DB_CONFIG_NAME': "dsrp-postgresql${vars.deployment.suffix}-nris",
@@ -243,7 +215,7 @@ app {
                             'ELASTIC_ENABLED': "${vars.deployment.elastic_enabled_nris}",
                             'ELASTIC_SERVICE_NAME': "${vars.deployment.elastic_service_name_nris}",
                             'ENVIRONMENT_NAME':"${app.deployment.env.name}",
-                            'API_URL': "https://${vars.modules.'dsrp-nginx'.HOST_CORE}${vars.modules.'dsrp-nginx'.PATH}/nris_api",
+                            'API_URL': "https://${vars.modules.'dsrp-nginx'.HOST_dsrp}${vars.modules.'dsrp-nginx'.PATH}/nris_api",
                     ]
                 ],
                 [
@@ -271,7 +243,7 @@ app {
                             'NAME':"schemaspy",
                             'VERSION':"${app.deployment.version}",
                             'SUFFIX': "${vars.deployment.suffix}",
-                            'BACKEND_HOST': "https://${vars.modules.'dsrp-nginx'.HOST_CORE}${vars.modules.'dsrp-nginx'.PATH}/api",
+                            'BACKEND_HOST': "https://${vars.modules.'dsrp-nginx'.HOST_dsrp}${vars.modules.'dsrp-nginx'.PATH}/api",
                             'APPLICATION_DOMAIN': "${vars.modules.'schemaspy'.HOST}",
                             'DB_CONFIG_NAME': "dsrp-postgresql${vars.deployment.suffix}"
                     ]
@@ -343,11 +315,9 @@ environments {
                 changeId = "${opt.'pr'}"
             }
             keycloak {
-                clientId_core = "mines-application-test"
-                clientId_minespace = "minespace-test"
+                clientId_dsrp = "mines-application-test"
                 resource = "mines-application-test"
-                idpHint_core = "idir"
-                idpHint_minespace = "bceid"
+                idpHint_dsrp = "idir"
                 url = "https://sso-test.pathfinder.gov.bc.ca/auth"
                 known_config_url = "https://sso-test.pathfinder.gov.bc.ca/auth/realms/dsrp/.well-known/openid-configuration"
                 siteminder_url = "https://logontest.gov.bc.ca"
@@ -442,7 +412,7 @@ environments {
                 application_suffix = "-pr-${vars.git.changeId}"
                 node_env = "test"
                 fn_layer_url = "https://delivery.apps.gov.bc.ca/ext/sgw/geo.allgov"
-                elastic_enabled_core = 1
+                elastic_enabled_dsrp = 1
                 elastic_enabled_nris = 1
                 elastic_service_name = "dsrp Test"
                 elastic_service_name_nris = "NRIS API Test"
@@ -453,13 +423,8 @@ environments {
                     HOST = "http://dsrp-frontend${vars.deployment.suffix}:3000"
                     PATH = ""
                 }
-                'dsrp-frontend-public' {
-                    HOST = "http://dsrp-frontend-public${vars.deployment.suffix}:3020"
-                    PATH = ""
-                }
                 'dsrp-nginx' {
-                    HOST_CORE = "minesdigitalservices-${vars.deployment.key}.pathfinder.gov.bc.ca"
-                    HOST_MINESPACE = "minespace-${vars.deployment.key}.pathfinder.gov.bc.ca"
+                    HOST_dsrp = "minesdigitalservices-${vars.deployment.key}.pathfinder.gov.bc.ca"
                     PATH = ""
                     ROUTE = "/"
                 }

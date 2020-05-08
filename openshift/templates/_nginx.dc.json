@@ -35,7 +35,7 @@
       "value": "/"
     },
     {
-      "name": "CORE_SERVICE_URL",
+      "name": "DSRP_SERVICE_URL",
       "value": "/"
     },
     {
@@ -47,19 +47,11 @@
       "value": "/"
     },
     {
-      "name": "MINESPACE_SERVICE_URL",
-      "value": "/"
-    },
-    {
       "name": "API_SERVICE_URL",
       "value": "/"
     },
     {
-      "name": "CORE_DOMAIN",
-      "required": true
-    },
-    {
-      "name": "MINESPACE_DOMAIN",
+      "name": "DSRP_DOMAIN",
       "required": true
     },
     {
@@ -95,9 +87,7 @@
         "name": "mds-access-logs${SUFFIX}"
       },
       "spec": {
-        "accessModes": [
-          "ReadWriteMany"
-        ],
+        "accessModes": ["ReadWriteMany"],
         "resources": {
           "requests": {
             "storage": "${LOG_PVC_SIZE}"
@@ -147,9 +137,7 @@
             "type": "ImageChange",
             "imageChangeParams": {
               "automatic": true,
-              "containerNames": [
-                "nginx"
-              ],
+              "containerNames": ["nginx"],
               "from": {
                 "kind": "ImageStreamTag",
                 "name": "${NAME}:${VERSION}"
@@ -182,8 +170,8 @@
                     "value": "${PATH_PREFIX}"
                   },
                   {
-                    "name": "CORE_SERVICE_URL",
-                    "value": "${CORE_SERVICE_URL}"
+                    "name": "DSRP_SERVICE_URL",
+                    "value": "${DSRP_SERVICE_URL}"
                   },
                   {
                     "name": "NRIS_API_SERVICE_URL",
@@ -194,20 +182,12 @@
                     "value": "${DOCUMENT_MANAGER_SERVICE_URL}"
                   },
                   {
-                    "name": "MINESPACE_SERVICE_URL",
-                    "value": "${MINESPACE_SERVICE_URL}"
-                  },
-                  {
                     "name": "API_SERVICE_URL",
                     "value": "${API_SERVICE_URL}"
                   },
                   {
-                    "name": "CORE_DOMAIN",
-                    "value": "${CORE_DOMAIN}"
-                  },
-                  {
-                    "name": "MINESPACE_DOMAIN",
-                    "value": "${MINESPACE_DOMAIN}"
+                    "name": "DSRP_DOMAIN",
+                    "value": "${DSRP_DOMAIN}"
                   }
                 ],
                 "resources": {
@@ -328,36 +308,7 @@
         }
       },
       "spec": {
-        "host": "${CORE_DOMAIN}",
-        "path": "${ROUTE}",
-        "to": {
-          "kind": "Service",
-          "name": "${NAME}${SUFFIX}",
-          "weight": 100
-        },
-        "port": {
-          "targetPort": "web"
-        },
-        "tls": {
-          "termination": "edge",
-          "insecureEdgeTerminationPolicy": "Redirect"
-        },
-        "wildcardPolicy": "None"
-      }
-    },
-    {
-      "kind": "Route",
-      "apiVersion": "v1",
-      "metadata": {
-        "name": "${NAME}${SUFFIX}-minespace",
-        "creationTimestamp": null,
-        "labels": {
-          "component": "${NAME}",
-          "route": "minespace"
-        }
-      },
-      "spec": {
-        "host": "${MINESPACE_DOMAIN}",
+        "host": "${DSRP_DOMAIN}",
         "path": "${ROUTE}",
         "to": {
           "kind": "Service",
