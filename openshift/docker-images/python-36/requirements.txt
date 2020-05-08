@@ -1,1 +1,1 @@
-../../../services/core-api/requirements.txt
+../../../services/dsrp-api/requirements.txt

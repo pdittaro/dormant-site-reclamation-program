@@ -43,7 +43,6 @@ def appLabel = "${opt.env}-${config.app.build.env.id}"
 def dbConfig = "${config.app.name}-postgresql-${config.app.build.env.id}"
 
 def frontendIsName = "dsrp-frontend-${config.app.build.env.id}"
-def frontendPublicIsName = "dsrp-frontend-public-${config.app.build.env.id}"
 def documentGeneratorURL = "http://docgen-${config.app.build.env.id}:3030"
 
 

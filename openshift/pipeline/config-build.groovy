@@ -39,7 +39,7 @@ app {
                             'NAME':"dsrp-python-backend",
                             'SUFFIX': "${app.build.suffix}",
                             'VERSION':"${app.build.version}",
-                            'SOURCE_CONTEXT_DIR': "services/core-api",
+                            'SOURCE_CONTEXT_DIR': "services/dsrp-api",
                             'SOURCE_REPOSITORY_URL': "${app.git.uri}"
                     ]
                 ],
@@ -64,16 +64,6 @@ app {
                     ]
                 ],
                 [
-                    'file':'openshift/templates/bddstack.bc.json',
-                    'params':[
-                            'NAME':"bdd-stack",
-                            'SUFFIX': "${app.build.suffix}",
-                            'VERSION':"${app.build.version}",
-                            'SOURCE_CONTEXT_DIR': "tests/functional-tests",
-                            'SOURCE_REPOSITORY_URL': "${app.git.uri}"
-                    ]
-                ],
-                [
                         'file':'openshift/templates/_nodejs.bc.json',
                         'params':[
                             'NAME':"dsrp-frontend",
@@ -81,22 +71,8 @@ app {
                             'APPLICATION_SUFFIX': "-${app.build.env.id}",
                             'BASE_PATH': "/${app.git.changeId}",
                             'VERSION':"${app.build.version}",
-                            'SOURCE_CONTEXT_DIR': "services/core-web",
+                            'SOURCE_CONTEXT_DIR': "services/dsrp-web",
                             'DOCKER_IMAGE_DIRECTORY': "openshift/docker-images/nodejs-10",
-                            'SOURCE_REPOSITORY_URL': "${app.git.uri}",
-                            'NODE_ENV': "production"
-                        ]
-                ],
-                [
-                        'file':'openshift/templates/_nodejs.bc.json',
-                        'params':[
-                            'NAME':"dsrp-frontend-public",
-                            'SUFFIX': "${app.build.suffix}",
-                            'APPLICATION_SUFFIX': "-${app.build.env.id}",
-                            'BASE_PATH': "/${app.git.changeId}",
-                            'VERSION':"${app.build.version}",
-                            'SOURCE_CONTEXT_DIR': "services/minespace-web",
-                            'DOCKER_IMAGE_DIRECTORY': "openshift/docker-images/nodejs-10-public",
                             'SOURCE_REPOSITORY_URL': "${app.git.uri}",
                             'NODE_ENV': "production"
                         ]

@@ -5,5 +5,4 @@ from app.api.exports.static_content.resources.core_static_content_resource impor
 
 api = Namespace('exports', description='Data dumps')
 
-api.add_resource(MineSummaryCSVResource, '/mine-summary-csv')
 api.add_resource(StaticContentResource, '/core-static-content')
