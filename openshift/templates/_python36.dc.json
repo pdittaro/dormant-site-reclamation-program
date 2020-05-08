@@ -2,7 +2,7 @@
   "kind": "Template",
   "apiVersion": "v1",
   "metadata": {
-    "name": "mds-python-dc",
+    "name": "dsrp-python-dc",
     "creationTimestamp": null
   },
   "parameters": [
@@ -59,39 +59,19 @@
       "value": "/"
     },
     {
-      "name": "MDS_NROS_DOCUMENT_API_SECRET",
-      "required": false,
-      "value": "template.mds-nros-client-service"
-    },
-    {
-      "name": "MDS_VFCBC_DOCUMENT_API_SECRET",
-      "required": false,
-      "value": "template.mds-vfcbc-client-service"
-    },
-    {
-      "name": "MDS_NRIS_API_SECRET",
-      "required": false,
-      "value": "template.mds-nris-secret"
-    },
-    {
       "name": "MDS_IDIR_SECRET",
       "required": false,
-      "value": "template.mds-idir-secret"
+      "value": "template.dsrp-idir-secret"
     },
     {
       "name": "MDS_METABASE_SECRET",
       "required": false,
-      "value": "template.mds-metabase-key"
-    },
-    {
-      "name": "METABASE_SITE_URL",
-      "required": false,
-      "value": "https://mds-metabase-empr-mds-prod.pathfinder.gov.bc.ca"
+      "value": "template.dsrp-metabase-key"
     },
     {
       "name": "REDIS_CONFIG_NAME",
       "required": false,
-      "value": "template.mds-redis-secret"
+      "value": "template.dsrp-redis-secret"
     },
     {
       "name": "CACHE_REDIS_HOST",
@@ -132,7 +112,7 @@
     {
       "name": "MDS_ELASTIC_SECRET",
       "required": false,
-      "value": "template.mds-elastic-secret"
+      "value": "template.dsrp-elastic-secret"
     },
     {
       "name": "ELASTIC_ENABLED",
