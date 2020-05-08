@@ -90,7 +90,7 @@
       "value": "4"
     },
     {
-      "name": "MDS_ELASTIC_SECRET",
+      "name": "DSRP_ELASTIC_SECRET",
       "required": false,
       "value": "template.dsrp-elastic-secret"
     },
@@ -292,7 +292,7 @@
                     "name": "ELASTIC_SECRET_TOKEN",
                     "valueFrom": {
                       "secretKeyRef": {
-                        "name": "${MDS_ELASTIC_SECRET}",
+                        "name": "${DSRP_ELASTIC_SECRET}",
                         "key": "secret-token"
                       }
                     }
@@ -301,7 +301,7 @@
                     "name": "ELASTIC_SERVER_URL",
                     "valueFrom": {
                       "secretKeyRef": {
-                        "name": "${MDS_ELASTIC_SECRET}",
+                        "name": "${DSRP_ELASTIC_SECRET}",
                         "key": "server-url"
                       }
                     }
