@@ -11,9 +11,10 @@ from marshmallow.exceptions import MarshmallowError
 from flask_jwt_oidc.exceptions import AuthError
 from werkzeug.exceptions import Forbidden, BadRequest
 
-from app.commands import register_commands
+from app.api.submission.namespace import api as submission_api
+
 from app.config import Config
-from app.extensions import db, jwt, api, cache, apm
+from app.extensions import db, jwt, api, cache
 
 import app.api.utils.setup_marshmallow
 
@@ -33,7 +34,6 @@ def create_app(test_config=None):
 
     register_extensions(app)
     register_routes(app)
-    register_commands(app)
 
     return app
 
@@ -44,12 +44,6 @@ def register_extensions(app):
     # Overriding swaggerUI base path to serve content under a prefix
     apidoc.apidoc.static_url_path = '{}/swaggerui'.format(Config.BASE_PATH)
     api.init_app(app)
-    if app.config['ELASTIC_ENABLED'] == '1':
-        apm.init_app(app)
-        logging.getLogger('elasticapm').setLevel(30)
-
-    else:
-        app.logger.info('ELASTIC_ENABLED: FALSE, set ELASTIC_ENABLED=1 to enable')
 
     try:
         jwt.init_app(app)
@@ -67,6 +61,8 @@ def register_extensions(app):
 def register_routes(app):
     # Set URL rules for resources
     app.add_url_rule('/', endpoint='index')
+
+    api.add_namespace(submission_api)
 
     # Healthcheck endpoint
     @api.route('/health')

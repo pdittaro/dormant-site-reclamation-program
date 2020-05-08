@@ -58,8 +58,10 @@ class ActivitySummaryBaseFactory(BaseFactory):
 
     reclamation_description = factory.Faker('sentence', nb_words=40, variable_nb_words=True)
     reclamation_cost = factory.Faker('pydecimal', right_digits=2, positive=True, max_value=500000)
-    total_disturbed_area = factory.Faker(
-        'pydecimal', right_digits=2, positive=True, max_value=500000)
+    total_disturbed_area = factory.Faker('pydecimal',
+                                         right_digits=2,
+                                         positive=True,
+                                         max_value=500000)
     total_disturbed_area_unit_type_code = factory.LazyFunction(RandomUnitTypeCode)
 
 
