@@ -1,8 +1,8 @@
 #!/bin/bash
 
 
-cp python-backend/.env services/core-api/.env
-cp frontend/.env services/core-web/.env
+cp python-backend/.env services/dsrp-api/.env
+cp frontend/.env services/dsrp-web/.env
 cp frontend-public/.env services/minespace-web/.env
 cp microservices/document_manager/backend/.env services/document-manager/backend/.env
 cp microservices/nris_api/backend/.env services/nris-api/backend/.env

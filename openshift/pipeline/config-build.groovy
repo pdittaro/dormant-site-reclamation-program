@@ -39,7 +39,7 @@ app {
                             'NAME':"dsrp-python-backend",
                             'SUFFIX': "${app.build.suffix}",
                             'VERSION':"${app.build.version}",
-                            'SOURCE_CONTEXT_DIR': "services/core-api",
+                            'SOURCE_CONTEXT_DIR': "services/dsrp-api",
                             'SOURCE_REPOSITORY_URL': "${app.git.uri}"
                     ]
                 ],
@@ -81,7 +81,7 @@ app {
                             'APPLICATION_SUFFIX': "-${app.build.env.id}",
                             'BASE_PATH': "/${app.git.changeId}",
                             'VERSION':"${app.build.version}",
-                            'SOURCE_CONTEXT_DIR': "services/core-web",
+                            'SOURCE_CONTEXT_DIR': "services/dsrp-web",
                             'DOCKER_IMAGE_DIRECTORY': "openshift/docker-images/nodejs-10",
                             'SOURCE_REPOSITORY_URL': "${app.git.uri}",
                             'NODE_ENV': "production"
